@@ -2,7 +2,7 @@
 
 @layer base {
   html, body {
-    background-color: #050508;
+    background-color: #0a0818;
     color: #ffffff;
   }
   html {
@@ -12,8 +12,10 @@
 
 :root {
   --font-inter: 'Inter', sans-serif;
-  --red: #CC0000;
-  --red-bright: #FF1A1A;
+  --violet: #8B5CF6;
+  --violet-light: #A78BFA;
+  --lavender: #C4B5FD;
+  --indigo: #6366F1;
 }
 
 html { scroll-behavior: smooth; }
@@ -21,18 +23,18 @@ html { scroll-behavior: smooth; }
 body {
   font-family: var(--font-inter), Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
-  background: #050508;
+  background: #0a0818;
   overflow-x: hidden;
 }
 
 /* ─── Scrollbar ─────────────────────────────── */
 ::-webkit-scrollbar { width: 5px; }
-::-webkit-scrollbar-track { background: #050508; }
-::-webkit-scrollbar-thumb { background: #CC0000; border-radius: 3px; }
+::-webkit-scrollbar-track { background: #0a0818; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #8B5CF6, #6366F1); border-radius: 3px; }
 
-/* ─── Gradient text ─────────────────────────── */
+/* ─── Gradient text (matches hero sky/lavender) ─────────────────────────── */
 .gradient-text {
-  background: linear-gradient(135deg, #FF4444 0%, #CC0000 50%, #FF6B35 100%);
+  background: linear-gradient(135deg, #C4B5FD 0%, #8B5CF6 50%, #6366F1 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -60,11 +62,11 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-.glass-red {
-  background: rgba(204, 0, 0, 0.15);
+.glass-violet {
+  background: rgba(139, 92, 246, 0.15);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(204, 0, 0, 0.3);
+  border: 1px solid rgba(139, 92, 246, 0.35);
 }
 
 /* ─── Modern glassmorphism variants ──────────── */
@@ -107,22 +109,22 @@ body {
 }
 
 .glass-input:focus {
-  border-color: rgba(204, 0, 0, 0.5) !important;
-  box-shadow: 0 0 0 3px rgba(204, 0, 0, 0.15);
+  border-color: rgba(139, 92, 246, 0.5) !important;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
   outline: none;
 }
 
-/* ─── Glow effects ──────────────────────────── */
-.glow-red {
-  box-shadow: 0 0 30px rgba(204, 0, 0, 0.4), 0 0 60px rgba(204, 0, 0, 0.1);
+/* ─── Glow effects (matches hero celestial glow) ──────────────────────────── */
+.glow-violet {
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.4), 0 0 60px rgba(99, 102, 241, 0.15);
 }
 
-.glow-red-sm {
-  box-shadow: 0 0 15px rgba(204, 0, 0, 0.35);
+.glow-violet-sm {
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.35);
 }
 
-.text-glow-red {
-  text-shadow: 0 0 20px rgba(204, 0, 0, 0.6);
+.text-glow-violet {
+  text-shadow: 0 0 20px rgba(196, 181, 253, 0.6);
 }
 
 /* ─── Gradient borders ──────────────────────── */
@@ -134,7 +136,7 @@ body {
   position: absolute;
   inset: 0;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(204,0,0,0.6), rgba(255,107,53,0.3), rgba(204,0,0,0.1));
+  background: linear-gradient(135deg, rgba(139,92,246,0.5), rgba(99,102,241,0.4), rgba(196,181,253,0.2));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -177,8 +179,8 @@ body {
   100% { background-position: 0% 50%; }
 }
 @keyframes border-glow {
-  0%, 100% { box-shadow: 0 0 5px rgba(204,0,0,0.3); }
-  50%       { box-shadow: 0 0 20px rgba(204,0,0,0.8), 0 0 40px rgba(204,0,0,0.3); }
+  0%, 100% { box-shadow: 0 0 5px rgba(139,92,246,0.3); }
+  50%       { box-shadow: 0 0 20px rgba(139,92,246,0.6), 0 0 40px rgba(99,102,241,0.25); }
 }
 
 .animate-float      { animation: float 6s ease-in-out infinite; }
@@ -195,25 +197,25 @@ body {
 .delay-500 { animation-delay: 0.5s; }
 .delay-700 { animation-delay: 0.7s; }
 
-/* ─── Shimmer button ────────────────────────── */
+/* ─── Shimmer button (lavender/violet gradient) ────────────────────────── */
 .btn-shimmer {
-  background: linear-gradient(90deg, #CC0000 0%, #FF4444 40%, #FF6B35 60%, #CC0000 100%);
+  background: linear-gradient(90deg, #6366F1 0%, #8B5CF6 35%, #A78BFA 65%, #6366F1 100%);
   background-size: 200% auto;
   animation: shimmer 3s linear infinite;
 }
 
-/* ─── Mesh gradient bg ──────────────────────── */
+/* ─── Mesh gradient bg (matches hero sky/lavender fields) ──────────────────────── */
 .mesh-bg {
   background:
-    radial-gradient(ellipse 80% 50% at 20% 20%, rgba(204,0,0,0.12) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 40% at 80% 80%, rgba(180,0,0,0.08) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 60% at 50% 50%, rgba(255,60,0,0.05) 0%, transparent 70%),
-    #050508;
+    radial-gradient(ellipse 80% 50% at 20% 20%, rgba(139,92,246,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 80%, rgba(99,102,241,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 60% at 50% 50%, rgba(196,181,253,0.04) 0%, transparent 70%),
+    #0a0818;
 }
 
 /* ─── Gradient section dividers ─────────────── */
 .section-gradient {
-  background: linear-gradient(180deg, #050508 0%, #0a0a12 50%, #050508 100%);
+  background: linear-gradient(180deg, #0a0818 0%, #0f0a1f 50%, #0a0818 100%);
 }
 
 /* ─── Noise texture overlay ─────────────────── */

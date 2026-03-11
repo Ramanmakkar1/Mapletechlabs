@@ -2,82 +2,75 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const footerLinks = {
-  Services: ['Custom Software Development','Web Development','Mobile App Development','AI & Automation Solutions','ERP/CRM Solutions','E-Commerce Solutions','Cloud & API Integration','Crypto Exchange Development'],
-  Industries: ['E-Commerce','Real Estate','Healthcare','Education','Finance & Fintech','Logistics'],
-  Resources: ['Case Studies','Blog','Documentation','Privacy Policy','Terms of Service','Careers'],
+  Services: ['Custom Software', 'Web Development', 'Mobile Apps', 'AI & Automation', 'E-Commerce', 'Cloud & APIs', 'Blockchain'],
+  Industries: ['E-Commerce', 'Real Estate', 'Healthcare', 'Education', 'Finance', 'Logistics'],
+  Company: ['Case Studies', 'Careers', 'Privacy', 'Terms'],
 };
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden" style={{ background: '#030306' }}>
-      {/* CTA Banner */}
-      <div className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, #1a0000 0%, #0d0000 60%, #1a0000 100%)' }} />
-        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 80% 100% at 50% 50%, rgba(204,0,0,0.18) 0%, transparent 70%)' }} />
-        <div className="absolute inset-0 border-y" style={{ borderColor: 'rgba(204,0,0,0.25)' }} />
-        {/* Animated orb */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[200px] rounded-full animate-pulse-glow pointer-events-none"
-          style={{ background: 'radial-gradient(ellipse, rgba(204,0,0,0.15) 0%, transparent 70%)', filter: 'blur(40px)' }} />
-        <div className="relative max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl lg:text-5xl font-black text-white mb-4 leading-tight">
-            Ready to <span className="gradient-text">Transform</span> Your Business?
+    <footer className="bg-[#050510]">
+      {/* CTA strip */}
+      <div className="border-t border-white/[0.06] py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl lg:text-3xl font-semibold text-white mb-3">
+            Ready to build?
           </h2>
-          <p className="text-gray-400 text-lg mb-10 max-w-xl mx-auto">
-            Let&apos;s discuss your project and build something extraordinary together.
+          <p className="text-gray-500 text-sm mb-8 max-w-md mx-auto">
+            Get in touch for a free consultation and project assessment.
           </p>
-          <Link href="#contact"
-            className="relative inline-flex items-center gap-3 px-8 py-4 font-bold text-white rounded-xl overflow-hidden group">
-            <span className="absolute inset-0 btn-shimmer rounded-xl" />
-            <span className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity" style={{ boxShadow: '0 0 40px rgba(204,0,0,0.4)' }} />
-            <span className="relative">Request a Proposal</span>
-            <svg className="relative w-5 h-5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          <Link
+            href="#contact"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-sm text-white bg-violet-600 hover:bg-violet-500 transition-colors"
+          >
+            Request a proposal
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </Link>
         </div>
       </div>
 
-      {/* Main Footer */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="h-px w-full mb-16" style={{ background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent)' }} />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
-          <div className="lg:col-span-2">
-            <Image src="/logo.png" alt="Mapletech Labs" width={140} height={52} className="h-12 w-auto brightness-0 invert mb-6 opacity-90" />
-            <p className="text-gray-500 text-sm leading-relaxed max-w-xs mb-6">
-              A premier software development company delivering innovative digital solutions powered by AI, blockchain, and modern web technologies.
-            </p>
-            <div className="flex gap-3">
-              {[
-                { label: 'LinkedIn', path: 'M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z M4 6a2 2 0 100-4 2 2 0 000 4z' },
-                { label: 'Twitter', path: 'M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z' },
-                { label: 'GitHub', path: 'M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22' },
-              ].map(s => (
-                <a key={s.label} href="#" aria-label={s.label}
-                  className="w-9 h-9 glass rounded-lg flex items-center justify-center text-gray-500 hover:text-red-400 border border-white/08 hover:border-red-600/30 transition-all duration-200">
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d={s.path} />
-                  </svg>
+      {/* Footer links */}
+      <div className="border-t border-white/[0.06] py-16">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-10">
+            <div className="lg:col-span-2">
+              <Image src="/logo.png" alt="Mapletech Labs" width={120} height={44} className="h-10 w-auto brightness-0 invert opacity-90 mb-4" />
+              <p className="text-gray-500 text-sm leading-relaxed max-w-xs">
+                Custom software development. Toronto, Canada.
+              </p>
+              <div className="flex gap-2 mt-6">
+                <a href="#" aria-label="LinkedIn" className="p-2 rounded-lg text-gray-500 hover:text-white hover:bg-white/5 transition-colors">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                 </a>
-              ))}
+                <a href="#" aria-label="Twitter" className="p-2 rounded-lg text-gray-500 hover:text-white hover:bg-white/5 transition-colors">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="#" aria-label="GitHub" className="p-2 rounded-lg text-gray-500 hover:text-white hover:bg-white/5 transition-colors">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fillRule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0012 2z" clipRule="evenodd"/></svg>
+                </a>
+              </div>
             </div>
+            {Object.entries(footerLinks).map(([cat, links]) => (
+              <div key={cat}>
+                <h4 className="text-xs font-medium uppercase tracking-wider text-gray-400 mb-4">{cat}</h4>
+                <ul className="space-y-3">
+                  {links.map((l) => (
+                    <li key={l}>
+                      <Link href="#" className="text-sm text-gray-500 hover:text-white transition-colors">
+                        {l}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
-          {Object.entries(footerLinks).map(([cat, links]) => (
-            <div key={cat}>
-              <h4 className="text-white font-bold text-xs uppercase tracking-widest mb-5">{cat}</h4>
-              <ul className="space-y-3">
-                {links.map(l => (
-                  <li key={l}>
-                    <Link href="#" className="text-gray-500 text-sm hover:text-red-400 transition-colors">{l}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-        <div className="h-px w-full mt-14 mb-8" style={{ background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent)' }} />
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-gray-600 text-xs">© {new Date().getFullYear()} Mapletech Labs. All rights reserved.</p>
-          <p className="text-gray-600 text-xs">Built with ❤️ in Toronto, Canada</p>
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-16 pt-8 border-t border-white/[0.06]">
+            <p className="text-gray-600 text-xs">© {new Date().getFullYear()} Mapletech Labs</p>
+            <p className="text-gray-600 text-xs">Toronto, Canada</p>
+          </div>
         </div>
       </div>
     </footer>

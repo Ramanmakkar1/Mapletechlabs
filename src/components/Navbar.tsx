@@ -27,18 +27,18 @@ export default function Navbar() {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
       scrolled ? 'bg-black/60 backdrop-blur-2xl border-b border-white/10 shadow-2xl shadow-black/50' : 'bg-transparent'
     }`}>
-      <div className="h-px w-full bg-gradient-to-r from-transparent via-red-600/60 to-transparent" />
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-violet-600/50 to-transparent" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex-shrink-0 group">
             <Image src="/logo.png" alt="Mapletech Labs" width={150} height={56}
-              className="h-12 w-auto brightness-0 invert transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(204,0,0,0.8)]" />
+              className="h-12 w-auto brightness-0 invert transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(139,92,246,0.6)]" />
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">
             <Link href="#" className="text-gray-300 text-sm font-medium hover:text-white transition-colors relative group">
               Case Studies
-              <span className="absolute -bottom-1 left-0 w-0 h-px bg-gradient-to-r from-red-600 to-orange-500 group-hover:w-full transition-all duration-300" />
+              <span className="absolute -bottom-1 left-0 w-0 h-px bg-gradient-to-r from-violet-600 to-indigo-500 group-hover:w-full transition-all duration-300" />
             </Link>
 
             <div className="relative" onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)}>
@@ -47,14 +47,14 @@ export default function Navbar() {
                 <svg className={`w-3.5 h-3.5 transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
-                <span className="absolute -bottom-1 left-0 w-0 h-px bg-gradient-to-r from-red-600 to-orange-500 group-hover:w-full transition-all duration-300" />
+                <span className="absolute -bottom-1 left-0 w-0 h-px bg-gradient-to-r from-violet-600 to-indigo-500 group-hover:w-full transition-all duration-300" />
               </button>
               {servicesOpen && (
                 <div className="absolute top-full left-0 mt-3 w-72 glass-strong rounded-xl shadow-2xl shadow-black/60">
                   <div className="p-2">
                     {services.map(s => (
                       <Link key={s} href="#services" className="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all">
-                        <span className="w-1.5 h-1.5 rounded-full bg-red-600 flex-shrink-0" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-violet-500 flex-shrink-0" />
                         {s}
                       </Link>
                     ))}
@@ -69,14 +69,14 @@ export default function Navbar() {
                 <svg className={`w-3.5 h-3.5 transition-transform duration-200 ${industriesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
-                <span className="absolute -bottom-1 left-0 w-0 h-px bg-gradient-to-r from-red-600 to-orange-500 group-hover:w-full transition-all duration-300" />
+                <span className="absolute -bottom-1 left-0 w-0 h-px bg-gradient-to-r from-violet-600 to-indigo-500 group-hover:w-full transition-all duration-300" />
               </button>
               {industriesOpen && (
                 <div className="absolute top-full left-0 mt-3 w-56 glass-strong rounded-xl shadow-2xl shadow-black/60">
                   <div className="p-2">
                     {industries.map(i => (
                       <Link key={i} href="#industries" className="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all">
-                        <span className="w-1.5 h-1.5 rounded-full bg-red-600 flex-shrink-0" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-violet-500 flex-shrink-0" />
                         {i}
                       </Link>
                     ))}
@@ -88,7 +88,7 @@ export default function Navbar() {
             {['Game Development', 'Company'].map(label => (
               <Link key={label} href="#" className="text-gray-300 text-sm font-medium hover:text-white transition-colors relative group">
                 {label}
-                <span className="absolute -bottom-1 left-0 w-0 h-px bg-gradient-to-r from-red-600 to-orange-500 group-hover:w-full transition-all duration-300" />
+                <span className="absolute -bottom-1 left-0 w-0 h-px bg-gradient-to-r from-violet-600 to-indigo-500 group-hover:w-full transition-all duration-300" />
               </Link>
             ))}
           </div>

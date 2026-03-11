@@ -10,13 +10,14 @@ export default function Hero() {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: 'url(/enhanced_4k_background.png)',
+          imageRendering: 'auto',
         }}
       />
-      {/* Subtle overlay for text readability */}
+      {/* Subtle overlay — blue-violet tint to blend with sections below */}
       <div
         className="absolute inset-0"
         style={{
-          background: 'linear-gradient(to top, rgba(8,4,20,0.7) 0%, rgba(8,4,20,0.2) 40%, transparent 70%)',
+          background: 'linear-gradient(to top, rgba(10,8,24,0.75) 0%, rgba(10,8,24,0.15) 40%, transparent 70%)',
         }}
       />
 
@@ -28,9 +29,9 @@ export default function Hero() {
             backdropFilter: 'blur(20px)',
             WebkitBackdropFilter: 'blur(20px)',
           }}>
-          {/* Logo icon — geometric/starburst */}
-          <div className="flex items-center justify-center w-9 h-9 rounded-lg mr-4 border border-white/20">
-            <svg viewBox="0 0 24 24" className="w-5 h-5 text-white" fill="currentColor">
+          {/* Logo icon — starburst with soft violet glow */}
+          <div className="flex items-center justify-center w-9 h-9 rounded-lg mr-4 border border-white/20 bg-white/5">
+            <svg viewBox="0 0 24 24" className="w-5 h-5 text-violet-300" fill="currentColor">
               <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" />
             </svg>
           </div>
@@ -63,7 +64,7 @@ export default function Hero() {
           <div className="max-w-md flex-shrink-0 space-y-6">
             <Link
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-full px-8 py-4 text-white text-sm font-medium border border-white/30 hover:border-white/50 hover:bg-white/10 transition-all duration-300"
+              className="inline-flex items-center gap-2 rounded-full px-8 py-4 text-white text-sm font-medium border border-white/30 hover:border-violet-400/50 hover:bg-violet-500/10 transition-all duration-300"
               style={{
                 background: 'rgba(255,255,255,0.05)',
                 backdropFilter: 'blur(12px)',

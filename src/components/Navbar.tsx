@@ -25,24 +25,30 @@ export default function Navbar() {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      scrolled ? 'bg-black/60 backdrop-blur-2xl border-b border-white/10 shadow-2xl shadow-black/50' : 'bg-transparent'
+      scrolled ? 'bg-white/80 backdrop-blur-2xl border-b border-gray-100 shadow-xl shadow-gray-200/50' : 'bg-transparent'
     }`}>
-      <div className="h-px w-full bg-gradient-to-r from-transparent via-violet-600/50 to-transparent" />
+      <div className={`h-[1px] w-full transition-opacity duration-500 ${scrolled ? 'bg-gradient-to-r from-transparent via-violet-500/20 to-transparent' : 'opacity-0'}`} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex-shrink-0 group">
-            <Image src="/logo.png" alt="Mapletech Labs" width={150} height={56}
-              className="h-12 w-auto brightness-0 invert transition-all duration-300 group-hover:drop-shadow-[0_0_12px_rgba(139,92,246,0.6)]" />
+            <div className="relative h-12 w-40">
+              <Image 
+                src="/logo.png" 
+                alt="Mapletech Labs" 
+                fill
+                className={`object-contain transition-all duration-300 ${scrolled ? 'brightness-0' : 'brightness-0 invert'} group-hover:scale-105`} 
+              />
+            </div>
           </Link>
 
           <div className="hidden lg:flex items-center gap-8">
-            <Link href="#" className="text-gray-300 text-sm font-medium hover:text-white transition-colors relative group">
+            <Link href="#" className={`text-sm font-medium transition-colors relative group ${scrolled ? 'text-gray-600 hover:text-black' : 'text-gray-100 hover:text-white'}`}>
               Case Studies
               <span className="absolute -bottom-1 left-0 w-0 h-px bg-gradient-to-r from-violet-600 to-indigo-500 group-hover:w-full transition-all duration-300" />
             </Link>
 
             <div className="relative" onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)}>
-              <button className="flex items-center gap-1 text-gray-300 text-sm font-medium hover:text-white transition-colors relative group">
+              <button className={`flex items-center gap-1 text-sm font-medium transition-colors relative group ${scrolled ? 'text-gray-600 hover:text-black' : 'text-gray-100 hover:text-white'}`}>
                 Services
                 <svg className={`w-3.5 h-3.5 transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -50,11 +56,11 @@ export default function Navbar() {
                 <span className="absolute -bottom-1 left-0 w-0 h-px bg-gradient-to-r from-violet-600 to-indigo-500 group-hover:w-full transition-all duration-300" />
               </button>
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-3 w-72 glass-strong rounded-xl shadow-2xl shadow-black/60">
+                <div className="absolute top-full left-0 mt-3 w-72 glass-strong rounded-xl overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200">
                   <div className="p-2">
                     {services.map(s => (
-                      <Link key={s} href="#services" className="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all">
-                        <span className="w-1.5 h-1.5 rounded-full bg-violet-500 flex-shrink-0" />
+                      <Link key={s} href="#services" className="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 hover:text-violet-600 hover:bg-violet-50 rounded-lg transition-all">
+                        <span className="w-1.5 h-1.5 rounded-full bg-violet-400 flex-shrink-0" />
                         {s}
                       </Link>
                     ))}
@@ -64,7 +70,7 @@ export default function Navbar() {
             </div>
 
             <div className="relative" onMouseEnter={() => setIndustriesOpen(true)} onMouseLeave={() => setIndustriesOpen(false)}>
-              <button className="flex items-center gap-1 text-gray-300 text-sm font-medium hover:text-white transition-colors relative group">
+              <button className={`flex items-center gap-1 text-sm font-medium transition-colors relative group ${scrolled ? 'text-gray-600 hover:text-black' : 'text-gray-100 hover:text-white'}`}>
                 Industries
                 <svg className={`w-3.5 h-3.5 transition-transform duration-200 ${industriesOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -72,11 +78,11 @@ export default function Navbar() {
                 <span className="absolute -bottom-1 left-0 w-0 h-px bg-gradient-to-r from-violet-600 to-indigo-500 group-hover:w-full transition-all duration-300" />
               </button>
               {industriesOpen && (
-                <div className="absolute top-full left-0 mt-3 w-56 glass-strong rounded-xl shadow-2xl shadow-black/60">
+                <div className="absolute top-full left-0 mt-3 w-56 glass-strong rounded-xl overflow-hidden animate-in fade-in slide-in-from-top-2 duration-200">
                   <div className="p-2">
                     {industries.map(i => (
-                      <Link key={i} href="#industries" className="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-300 hover:text-white hover:bg-white/5 rounded-lg transition-all">
-                        <span className="w-1.5 h-1.5 rounded-full bg-violet-500 flex-shrink-0" />
+                      <Link key={i} href="#industries" className="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-600 hover:text-violet-600 hover:bg-violet-50 rounded-lg transition-all">
+                        <span className="w-1.5 h-1.5 rounded-full bg-violet-400 flex-shrink-0" />
                         {i}
                       </Link>
                     ))}
@@ -86,7 +92,7 @@ export default function Navbar() {
             </div>
 
             {['Game Development', 'Company'].map(label => (
-              <Link key={label} href="#" className="text-gray-300 text-sm font-medium hover:text-white transition-colors relative group">
+              <Link key={label} href="#" className={`text-sm font-medium transition-colors relative group ${scrolled ? 'text-gray-600 hover:text-black' : 'text-gray-100 hover:text-white'}`}>
                 {label}
                 <span className="absolute -bottom-1 left-0 w-0 h-px bg-gradient-to-r from-violet-600 to-indigo-500 group-hover:w-full transition-all duration-300" />
               </Link>
@@ -103,7 +109,7 @@ export default function Navbar() {
             </Link>
           </div>
 
-          <button className="lg:hidden text-white p-2" onClick={() => setMobileOpen(!mobileOpen)}>
+          <button className={`lg:hidden p-2 transition-colors ${scrolled ? 'text-black' : 'text-white'}`} onClick={() => setMobileOpen(!mobileOpen)}>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {mobileOpen
                 ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -115,9 +121,9 @@ export default function Navbar() {
       </div>
 
       {mobileOpen && (
-        <div className="lg:hidden glass-strong border-t border-white/10 py-4 px-4 space-y-1">
+        <div className="lg:hidden glass-strong border-t border-gray-100 py-4 px-4 space-y-1 animate-in slide-in-from-top-4 duration-300">
           {['Case Studies', 'Services', 'Industries', 'Game Development', 'Company'].map(item => (
-            <Link key={item} href="#" className="block text-gray-300 text-sm px-4 py-3 hover:text-white hover:bg-white/5 rounded-lg transition-all" onClick={() => setMobileOpen(false)}>
+            <Link key={item} href="#" className="block text-gray-600 text-sm px-4 py-3 hover:text-violet-600 hover:bg-violet-50 rounded-lg transition-all" onClick={() => setMobileOpen(false)}>
               {item}
             </Link>
           ))}
@@ -131,3 +137,4 @@ export default function Navbar() {
     </nav>
   );
 }
+

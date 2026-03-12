@@ -3,50 +3,42 @@
 import { useState } from 'react';
 
 const faqs = [
-  { q: 'How much does custom software development cost?', a: 'Project costs vary by scope and complexity. We provide detailed quotes after a discovery call. Typical range: $10K–$200K+ with flexible support options.' },
-  { q: 'Do you support iOS and Android?', a: 'Yes. We build native and cross-platform apps (React Native, Flutter) so you can reach both platforms from one codebase.' },
-  { q: 'Can you integrate AI into existing software?', a: 'Yes. We retrofit AI into legacy systems — NLP, computer vision, predictive analytics, and workflow automation.' },
-  { q: 'What is your development process?', a: 'Agile with 2-week sprints: Discovery → Design → Development → QA → Deployment → Support. Full visibility at every stage.' },
-  { q: 'Do you offer blockchain development?', a: 'Yes. Smart contracts, DeFi, NFT platforms, crypto exchanges, and enterprise blockchain integrations.' },
-  { q: 'Who owns the code?', a: 'You do. 100%. All source code and IP transfer upon final payment, with full documentation.' },
-  { q: 'Post-launch support?', a: 'Yes. Support packages from bug fixes to fully managed services with 24/7 monitoring and dedicated teams.' },
-  { q: 'Typical project timeline?', a: 'Depends on scope. Simple web apps: 6–8 weeks. Enterprise platforms: 6+ months. Timelines included in proposals.' },
+  { q: 'What is your typical project timeline?', a: 'Most projects range from 8 to 16 weeks depending on complexity. Small features or MVPs can be delivered faster.' },
+  { q: 'Do you offer ongoing support?', a: 'Yes, we provide maintenance and support packages to ensure your systems remain secure and high-performing.' },
+  { q: 'How do you handle project management?', a: 'We use Agile methodologies with weekly sprints, transparent communication via Slack/Jira, and regular demos.' },
+  { q: 'Can you work with existing codebases?', a: 'Absolutely. We often help clients refactor, scale, or add features to their current legacy systems.' },
 ];
 
 export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-24 lg:py-32 bg-[#0a0818] border-t border-white/[0.04]">
-      <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-xs font-medium uppercase tracking-[0.2em] text-gray-500 mb-4">FAQ</p>
-        <h2 className="text-3xl lg:text-4xl font-semibold text-white tracking-tight mb-14">
-          Common questions
-        </h2>
-        <div className="space-y-0">
-          {faqs.map((faq, idx) => (
-            <div
-              key={idx}
-              className="border-b border-white/[0.06]"
-            >
+    <section className="py-24 lg:py-32 bg-gray-50/30 overflow-hidden">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-violet-600 mb-4">Common Questions</p>
+          <h2 className="text-3xl lg:text-5xl font-black text-gray-900 tracking-tight">
+            Frequently Asked <span className="text-gray-400">Questions</span>
+          </h2>
+        </div>
+
+        <div className="space-y-4">
+          {faqs.map((faq, i) => (
+            <div key={i} className={`rounded-2xl border transition-all duration-300 ${open === i ? 'bg-white border-violet-200 shadow-xl shadow-gray-200/50' : 'bg-transparent border-gray-100 hover:border-gray-200'}`}>
               <button
-                className="w-full flex items-start justify-between gap-4 py-5 text-left"
-                onClick={() => setOpen(open === idx ? null : idx)}
+                onClick={() => setOpen(open === i ? null : i)}
+                className="w-full flex items-center justify-between p-6 text-left"
               >
-                <span className={`text-[15px] font-medium leading-snug ${open === idx ? 'text-white' : 'text-gray-300'}`}>
-                  {faq.q}
-                </span>
-                <span className={`flex-shrink-0 w-6 h-6 rounded-full border flex items-center justify-center text-xs transition-all ${
-                  open === idx
-                    ? 'border-violet-500/50 bg-violet-500/10 text-violet-400 rotate-45'
-                    : 'border-white/20 text-gray-500'
-                }`}>
-                  +
+                <span className={`font-bold text-lg ${open === i ? 'text-violet-600' : 'text-gray-700'}`}>{faq.q}</span>
+                <span className={`w-8 h-8 rounded-full flex items-center justify-center transition-transform duration-300 ${open === i ? 'bg-violet-600 text-white rotate-180' : 'bg-gray-100 text-gray-500'}`}>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
                 </span>
               </button>
-              {open === idx && (
-                <div className="pb-5 pr-10">
-                  <p className="text-gray-500 text-sm leading-relaxed">{faq.a}</p>
+              {open === i && (
+                <div className="px-6 pb-6 animate-in fade-in slide-in-from-top-2 duration-300">
+                  <p className="text-gray-600 leading-relaxed">{faq.a}</p>
                 </div>
               )}
             </div>

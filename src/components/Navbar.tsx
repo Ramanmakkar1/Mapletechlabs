@@ -209,16 +209,13 @@ const industryLinks = [
   { label: 'Logistics & Supply Chain', href: '/industries/logistics' },
   { label: 'Education & EdTech', href: '/industries/edtech' },
   { label: 'Enterprise & SaaS', href: '/industries/enterprise' },
-  { label: 'Real Estate & PropTech', href: '#industries' },
-  { label: 'Gaming & Entertainment', href: '/services/game-development' },
 ];
 
 const companyLinks = [
   { label: 'About Us', href: '/about' },
-  { label: 'Case Studies', href: '#portfolio' },
+  { label: 'Case Studies', href: '/case-studies' },
   { label: 'Blog & Insights', href: '/blog' },
-  { label: 'Awards & Recognition', href: '#awards' },
-  { label: 'Careers', href: '/contact' },
+  { label: 'Contact Us', href: '/contact' },
 ];
 
 // ── Component ───────────────────────────────────────────────────────
@@ -313,15 +310,15 @@ export default function Navbar() {
                 </button>
               </div>
 
-              {['Portfolio', 'Insights'].map(label => (
-                <Link key={label} href={label === 'Portfolio' ? '#portfolio' : '#insights'} style={{
+              {[{ label: 'Case Studies', href: '/case-studies' }, { label: 'Blog', href: '/blog' }].map(item => (
+                <Link key={item.label} href={item.href} style={{
                   display: 'flex', alignItems: 'center', padding: '10px 16px', borderRadius: 100,
                   fontSize: 13, fontWeight: 500, color: 'rgba(255,255,255,0.55)',
                   textDecoration: 'none', transition: '0.2s',
                 }}
                   onMouseEnter={e => { e.currentTarget.style.color = '#fff'; e.currentTarget.style.background = 'rgba(255,255,255,0.06)'; }}
                   onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.55)'; e.currentTarget.style.background = 'transparent'; }}
-                >{label}</Link>
+                >{item.label}</Link>
               ))}
             </div>
 
@@ -333,7 +330,7 @@ export default function Navbar() {
               >
                 +1 (888) 000-0000
               </Link>
-              <Link href="#contact" style={{
+              <Link href="/contact" style={{
                 display: 'inline-flex', alignItems: 'center', gap: 8, height: 42, padding: '0 24px', borderRadius: 100,
                 background: 'linear-gradient(135deg, #b4fd83, #7deb3e)', color: '#000', fontSize: 13, fontWeight: 700,
                 textDecoration: 'none', letterSpacing: '-0.01em', transition: '0.3s',
@@ -543,18 +540,25 @@ export default function Navbar() {
         display: 'flex', flexDirection: 'column', padding: '100px 32px 60px',
       }}>
         <div style={{ display: 'flex', flexDirection: 'column', gap: 8, marginBottom: 48 }}>
-          {['Services', 'Industries', 'Company', 'Portfolio', 'Insights'].map(label => (
-            <Link key={label} href={`#${label.toLowerCase()}`}
+          {[
+            { label: 'Services', href: '/services/mobile-app-development' },
+            { label: 'Industries', href: '/industries/fintech' },
+            { label: 'About', href: '/about' },
+            { label: 'Case Studies', href: '/case-studies' },
+            { label: 'Blog', href: '/blog' },
+            { label: 'Contact', href: '/contact' },
+          ].map(item => (
+            <Link key={item.label} href={item.href}
               onClick={() => setMenuOpen(false)}
               style={{ fontSize: 28, fontWeight: 500, color: 'rgba(255,255,255,0.8)', textDecoration: 'none', letterSpacing: '-0.03em', padding: '10px 0', borderBottom: '1px solid rgba(255,255,255,0.06)', transition: '0.2s' }}
               onMouseEnter={e => { e.currentTarget.style.color = '#fff'; }}
               onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.8)'; }}
             >
-              {label}
+              {item.label}
             </Link>
           ))}
         </div>
-        <Link href="#contact" onClick={() => setMenuOpen(false)}
+        <Link href="/contact" onClick={() => setMenuOpen(false)}
           style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 56, padding: '0 36px', borderRadius: 100, background: 'linear-gradient(135deg, #b4fd83, #7deb3e)', color: '#000', fontSize: 16, fontWeight: 700, textDecoration: 'none', width: 'fit-content' }}
         >
           Get a Free Quote

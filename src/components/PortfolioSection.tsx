@@ -1,10 +1,38 @@
 'use client';
 import { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
 
 const projects = [
-  { client: 'FinanceHub', title: 'AI Trading Engine', category: 'FinTech', desc: 'Processing 2M+ transactions daily with real-time ML sentiment analysis and sub-50ms latency.', tags: ['Python', 'AWS', 'SageMaker'], metric: '2M+', metricLabel: 'Daily TXs' },
-  { client: 'MediCore', title: 'Telehealth Platform', category: 'Healthcare', desc: 'HIPAA-compliant platform connecting 100K+ patients with specialists via encrypted HD video.', tags: ['React Native', 'WebRTC', 'HealthKit'], metric: '100K+', metricLabel: 'Patients' },
-  { client: 'RetailX', title: 'Enterprise Commerce', category: 'Retail', desc: 'High-scale headless commerce handling 500K concurrent users during peak sale events.', tags: ['Next.js', 'Kubernetes', 'Redis'], metric: '500K', metricLabel: 'Concurrent Users' },
+  {
+    client: 'FinanceHub',
+    title: 'AI Trading Engine',
+    category: 'FinTech',
+    desc: 'Processing 2M+ transactions daily with real-time ML sentiment analysis and sub-50ms latency.',
+    tags: ['Python', 'AWS', 'SageMaker'],
+    metric: '2M+',
+    metricLabel: 'Daily TXs',
+    image: '/images/portfolio-finance.png',
+  },
+  {
+    client: 'MediCore',
+    title: 'Telehealth Platform',
+    category: 'Healthcare',
+    desc: 'HIPAA-compliant platform connecting 100K+ patients with specialists via encrypted HD video.',
+    tags: ['React Native', 'WebRTC', 'HealthKit'],
+    metric: '100K+',
+    metricLabel: 'Patients',
+    image: '/images/portfolio-health.png',
+  },
+  {
+    client: 'RetailX',
+    title: 'Enterprise Commerce',
+    category: 'Retail',
+    desc: 'High-scale headless commerce handling 500K concurrent users during peak sale events.',
+    tags: ['Next.js', 'Kubernetes', 'Redis'],
+    metric: '500K',
+    metricLabel: 'Concurrent Users',
+    image: '/images/portfolio-retail.png',
+  },
 ];
 
 export default function PortfolioSection() {
@@ -22,7 +50,7 @@ export default function PortfolioSection() {
   }, []);
 
   return (
-    <section ref={ref} id="portfolio" className="section-padding" style={{ background: '#000', padding: '160px 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+    <section ref={ref} id="portfolio" className="section-padding" style={{ background: '#000', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
       <div className="cb-container">
         <div className="reveal" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 80, gap: 40, flexWrap: 'wrap' }}>
           <div>
@@ -51,7 +79,7 @@ export default function PortfolioSection() {
                   <div style={{ fontSize: 52, fontWeight: 600, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1 }}>{p.metric}</div>
                   <div style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.25)', textTransform: 'uppercase', letterSpacing: '0.1em', marginTop: 8 }}>{p.metricLabel}</div>
                 </div>
-                <div style={{ width: 1, background: 'rgba(255,255,255,0.07)' }} />
+                <div style={{ width: 1, background: 'rgba(255,255,255,0.07)', alignSelf: 'stretch' }} />
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, alignContent: 'center' }}>
                   {p.tags.map(t => <span key={t} style={{ fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.45)', padding: '8px 18px', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 100 }}>{t}</span>)}
                 </div>
@@ -63,17 +91,22 @@ export default function PortfolioSection() {
             </div>
           </div>
 
-          <div style={{ background: '#050505', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 'clamp(40px, 8vw, 80px)', position: 'relative', overflow: 'hidden', borderLeft: '1px solid rgba(255,255,255,0.06)' }} className="portfolio-visual">
-            <div style={{ position: 'absolute', top: '15%', right: '15%', width: '60%', height: '60%', background: 'radial-gradient(circle, rgba(180,253,131,0.1) 0%, transparent 65%)', filter: 'blur(60px)' }} />
-            <div style={{ width: 200, height: 380, borderRadius: 36, background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.1)', position: 'relative', zIndex: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 20, padding: 32 }}>
-              <div style={{ width: 60, height: 60, borderRadius: '50%', background: 'rgba(180,253,131,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#b4fd83" strokeWidth="1.5"><path d="M12 2a5 5 0 1 0 0 10A5 5 0 0 0 12 2zM3 20c0-4 4-7 9-7s9 3 9 7" /></svg>
-              </div>
-              <div style={{ textAlign: 'center' }}>
-                <div style={{ fontSize: 15, fontWeight: 600, color: '#fff' }}>{p.client}</div>
-                <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.35)', marginTop: 4, textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 700 }}>{p.category}</div>
-              </div>
-              <div style={{ padding: '10px 20px', background: 'rgba(180,253,131,0.12)', borderRadius: 100, fontSize: 20, fontWeight: 700, color: '#b4fd83' }}>{p.metric}</div>
+          {/* Right: real project image */}
+          <div style={{ background: '#050505', display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative', overflow: 'hidden', borderLeft: '1px solid rgba(255,255,255,0.06)' }} className="portfolio-visual">
+            <div style={{ position: 'absolute', inset: 0 }}>
+              <Image
+                src={p.image}
+                alt={p.title}
+                fill
+                style={{ objectFit: 'cover', opacity: 0.7 }}
+              />
+            </div>
+            {/* Overlay gradient */}
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(0,0,0,0.4) 0%, transparent 60%)' }} />
+            {/* Metric badge */}
+            <div style={{ position: 'absolute', bottom: 28, right: 28, padding: '12px 20px', background: 'rgba(0,0,0,0.7)', border: '1px solid rgba(180,253,131,0.3)', borderRadius: 100, display: 'flex', alignItems: 'center', gap: 10, backdropFilter: 'blur(12px)' }}>
+              <div style={{ width: 7, height: 7, borderRadius: '50%', background: '#b4fd83', boxShadow: '0 0 8px #b4fd83' }} />
+              <span style={{ fontSize: 13, fontWeight: 700, color: '#b4fd83' }}>{p.metric} {p.metricLabel}</span>
             </div>
           </div>
         </div>

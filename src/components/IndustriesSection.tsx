@@ -40,8 +40,8 @@ export default function IndustriesSection() {
           {industries.map((ind, i) => (
             <div key={ind.name} className={`reveal reveal-d${Math.min(i + 1, 6)}`}
               style={{ padding: '48px', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 36, display: 'flex', flexDirection: 'column', gap: 24, transition: 'all 0.4s ease', cursor: 'default' }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(180,253,131,0.25)'; e.currentTarget.style.background = 'rgba(180,253,131,0.03)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)'; e.currentTarget.style.background = 'transparent'; e.currentTarget.style.transform = ''; }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(180,253,131,0.25)'; e.currentTarget.style.background = 'rgba(180,253,131,0.03)'; e.currentTarget.style.transform = 'translateY(-4px)'; e.currentTarget.style.boxShadow = '0 24px 60px rgba(0,0,0,0.5), 0 0 40px rgba(180,253,131,0.08)'; }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)'; e.currentTarget.style.background = 'transparent'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}
             >
               <div style={{ width: 52, height: 52, borderRadius: 16, background: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.6)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d={ind.icon} /></svg>

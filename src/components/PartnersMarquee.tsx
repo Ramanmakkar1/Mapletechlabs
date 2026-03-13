@@ -25,42 +25,22 @@ function PartnerLogo({ name, domain }: { name: string; domain: string }) {
   const logoSrc = `https://logo.clearbit.com/${domain}`;
 
   return (
-    <div
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        padding: '12px 24px',
-        border: '1px solid rgba(255,255,255,0.08)',
-        borderRadius: 100,
-        minWidth: 100,
-        height: 44,
-        background: 'rgba(255,255,255,0.02)',
-        transition: '0.3s',
-        cursor: 'default',
-      }}
-      onMouseEnter={e => {
-        e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)';
-        e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
-      }}
-      onMouseLeave={e => {
-        e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)';
-        e.currentTarget.style.background = 'rgba(255,255,255,0.02)';
-      }}
+    <div style={{
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      padding: '10px 24px', border: '1px solid rgba(255,255,255,0.07)',
+      borderRadius: 100, minWidth: 100, height: 42,
+      background: 'rgba(255,255,255,0.02)', transition: '0.3s', cursor: 'default',
+    }}
+      onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)'; e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; }}
+      onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)'; e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; }}
     >
       {failed ? (
-        <span style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.4)' }}>{name}</span>
+        <span style={{ fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.35)', whiteSpace: 'nowrap' }}>{name}</span>
       ) : (
         <img
           src={logoSrc}
           alt={name}
-          style={{
-            height: 20,
-            width: 'auto',
-            maxWidth: 80,
-            objectFit: 'contain',
-            filter: 'brightness(0) invert(0.7)',
-          }}
+          style={{ height: 18, width: 'auto', maxWidth: 80, objectFit: 'contain', filter: 'brightness(0) invert(0.6)' }}
           onError={() => setFailed(true)}
         />
       )}
@@ -70,17 +50,25 @@ function PartnerLogo({ name, domain }: { name: string; domain: string }) {
 
 export default function PartnersMarquee() {
   return (
-    <section className="section-padding-sm" style={{ background: '#000', borderTop: '1px solid rgba(255,255,255,0.07)', overflow: 'hidden', position: 'relative' }}>
-      <div style={{ position: 'absolute', top: 0, left: 0, width: 180, height: '100%', background: 'linear-gradient(to right, #000, transparent)', zIndex: 2, pointerEvents: 'none' }} />
-      <div style={{ position: 'absolute', top: 0, right: 0, width: 180, height: '100%', background: 'linear-gradient(to left, #000, transparent)', zIndex: 2, pointerEvents: 'none' }} />
+    <section style={{ background: '#000', borderTop: '1px solid rgba(255,255,255,0.07)', padding: '52px 0', overflow: 'hidden', position: 'relative' }}>
+      {/* Fade edges */}
+      <div style={{ position: 'absolute', top: 0, left: 0, width: 200, height: '100%', background: 'linear-gradient(to right, #000, transparent)', zIndex: 2, pointerEvents: 'none' }} />
+      <div style={{ position: 'absolute', top: 0, right: 0, width: 200, height: '100%', background: 'linear-gradient(to left, #000, transparent)', zIndex: 2, pointerEvents: 'none' }} />
 
-      <div style={{ marginBottom: 12, display: 'flex', gap: 12, width: 'max-content', animation: 'marquee-l 40s linear infinite' }}>
+      {/* Label */}
+      <div style={{ textAlign: 'center', marginBottom: 32, position: 'relative', zIndex: 3 }}>
+        <span style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.2)', textTransform: 'uppercase', letterSpacing: '0.15em' }}>
+          Trusted by 150+ companies worldwide
+        </span>
+      </div>
+
+      <div style={{ marginBottom: 10, display: 'flex', gap: 10, width: 'max-content', animation: 'marquee-l 40s linear infinite' }}>
         {[...partners, ...partners].map((p, i) => (
           <PartnerLogo key={`${p.domain}-${i}`} name={p.name} domain={p.domain} />
         ))}
       </div>
 
-      <div style={{ display: 'flex', gap: 12, width: 'max-content', animation: 'marquee-r 45s linear infinite' }}>
+      <div style={{ display: 'flex', gap: 10, width: 'max-content', animation: 'marquee-r 45s linear infinite' }}>
         {[...partners.slice(8), ...partners, ...partners.slice(0, 8)].map((p, i) => (
           <PartnerLogo key={`${p.domain}-r-${i}`} name={p.name} domain={p.domain} />
         ))}

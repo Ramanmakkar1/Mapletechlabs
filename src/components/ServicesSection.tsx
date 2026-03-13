@@ -25,7 +25,7 @@ export default function ServicesSection() {
   }, []);
 
   return (
-    <section ref={ref} id="services" className="section-padding" style={{ background: '#000', padding: '160px 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+    <section ref={ref} id="services" className="section-padding" style={{ background: '#000', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
       <div className="cb-container">
         <div className="reveal" style={{ marginBottom: 80 }}>
           <div style={{ fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: 20 }}>Capabilities</div>
@@ -44,8 +44,8 @@ export default function ServicesSection() {
           {large.map((s, i) => (
             <div key={s.title} className={`reveal reveal-d${i + 1}`}
               style={{ background: 'rgba(255,255,255,0.025)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 40, padding: 'clamp(32px, 5vw, 60px)', display: 'flex', flexDirection: 'column', gap: 32, minHeight: 360, position: 'relative', overflow: 'hidden', transition: 'all 0.4s ease' }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(180,253,131,0.25)'; e.currentTarget.style.background = 'rgba(180,253,131,0.03)'; }}
-              onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.background = 'rgba(255,255,255,0.025)'; }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(180,253,131,0.25)'; e.currentTarget.style.background = 'rgba(180,253,131,0.03)'; e.currentTarget.style.boxShadow = '0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(180,253,131,0.1)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.background = 'rgba(255,255,255,0.025)'; e.currentTarget.style.boxShadow = ''; e.currentTarget.style.transform = ''; }}
             >
               <div style={{ position: 'absolute', bottom: -20, right: 28, fontSize: 180, fontWeight: 800, color: 'rgba(255,255,255,0.02)', lineHeight: 1, pointerEvents: 'none', letterSpacing: '-0.05em' }}>{s.num}</div>
               <div>
@@ -69,7 +69,7 @@ export default function ServicesSection() {
           {small.map((s, i) => (
             <div key={s.title} className={`reveal reveal-d${i + 1}`}
               style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.07)', borderRadius: 32, padding: 'clamp(24px, 4vw, 40px) clamp(24px, 3vw, 36px)', display: 'flex', flexDirection: 'column', gap: 16, minHeight: 220, position: 'relative', overflow: 'hidden', transition: 'all 0.4s ease' }}
-              onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(180,253,131,0.25)'; e.currentTarget.style.background = 'rgba(180,253,131,0.03)'; }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(180,253,131,0.25)'; e.currentTarget.style.background = 'rgba(180,253,131,0.03)'; e.currentTarget.style.boxShadow = '0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(180,253,131,0.1)'; e.currentTarget.style.transform = 'translateY(-4px)'; }}
               onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)'; e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; }}
             >
               <div style={{ position: 'absolute', bottom: -8, right: 16, fontSize: 80, fontWeight: 800, color: 'rgba(255,255,255,0.02)', lineHeight: 1, pointerEvents: 'none', letterSpacing: '-0.05em' }}>{s.num}</div>

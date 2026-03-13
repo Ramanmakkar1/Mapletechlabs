@@ -85,7 +85,7 @@ export default function WhyUs() {
   }, []);
 
   return (
-    <section ref={ref} id="about" className="section-padding" style={{ background: '#000', padding: '160px 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+    <section ref={ref} id="about" className="section-padding" style={{ background: '#000', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
       <div className="cb-container">
 
         {/* Header */}
@@ -123,11 +123,13 @@ export default function WhyUs() {
                 e.currentTarget.style.borderColor = 'rgba(180,253,131,0.25)';
                 e.currentTarget.style.background = 'rgba(180,253,131,0.03)';
                 e.currentTarget.style.transform = 'translateY(-4px)';
+                e.currentTarget.style.boxShadow = '0 24px 60px rgba(0,0,0,0.5), 0 0 40px rgba(180,253,131,0.08)';
               }}
               onMouseLeave={e => {
                 e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)';
                 e.currentTarget.style.background = 'rgba(255,255,255,0.02)';
                 e.currentTarget.style.transform = '';
+                e.currentTarget.style.boxShadow = '';
               }}
             >
               {/* Watermark stat */}

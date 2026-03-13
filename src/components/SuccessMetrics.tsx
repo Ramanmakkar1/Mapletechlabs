@@ -75,7 +75,7 @@ export default function SuccessMetrics() {
   }, []);
 
   return (
-    <section ref={ref} className="section-padding" style={{ background: '#000', padding: '140px 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+    <section ref={ref} className="section-padding" style={{ background: '#000', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
       <div className="cb-container">
         <div className="reveal" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 40, marginBottom: 80, flexWrap: 'wrap' }}>
           <div>

@@ -18,7 +18,7 @@ const steps = [
     num: '02',
     title: 'Design',
     duration: '1–2 weeks',
-    desc: 'Our designers craft pixel-perfect wireframes and high-fidelity prototypes. You see exactly what you\'re getting before a single line of code is written.',
+    desc: "Our designers craft pixel-perfect wireframes and high-fidelity prototypes. You see exactly what you're getting before a single line of code is written.",
     icon: (
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#b4fd83" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M12 20h9" /><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
@@ -77,7 +77,7 @@ export default function ProcessSection() {
   }, []);
 
   return (
-    <section ref={ref} id="process" className="section-padding" style={{ background: '#000', padding: '160px 0', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
+    <section ref={ref} id="process" className="section-padding" style={{ background: '#000', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
       <div className="cb-container">
 
         {/* Header */}
@@ -94,64 +94,90 @@ export default function ProcessSection() {
           </p>
         </div>
 
-        {/* Steps */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-          {steps.map((step, i) => (
-            <div
-              key={step.num}
-              className={`reveal reveal-d${Math.min(i + 1, 6)} process-step`}
-              style={{
-                alignItems: 'center',
-                padding: '40px 48px',
-                border: '1px solid rgba(255,255,255,0.07)',
-                borderRadius: 24,
-                background: 'rgba(255,255,255,0.02)',
-                transition: 'all 0.4s ease',
-                cursor: 'default',
-              }}
-              onMouseEnter={e => {
-                e.currentTarget.style.background = 'rgba(180,253,131,0.03)';
-                e.currentTarget.style.borderColor = 'rgba(180,253,131,0.2)';
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.background = 'rgba(255,255,255,0.02)';
-                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)';
-              }}
-            >
-              {/* Number + Icon */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 12, alignItems: 'flex-start' }}>
-                <div style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.2)', letterSpacing: '0.1em' }}>{step.num}</div>
-                <div style={{ width: 48, height: 48, borderRadius: 14, background: 'rgba(180,253,131,0.08)', border: '1px solid rgba(180,253,131,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  {step.icon}
+        {/* Steps with left connecting line */}
+        <div style={{ position: 'relative' }}>
+          {/* Vertical connecting line */}
+          <div style={{
+            position: 'absolute',
+            left: 39,
+            top: 28,
+            bottom: 28,
+            width: 1,
+            background: 'linear-gradient(to bottom, rgba(180,253,131,0.4) 0%, rgba(180,253,131,0.1) 60%, transparent 100%)',
+            zIndex: 0,
+          }} />
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+            {steps.map((step, i) => (
+              <div
+                key={step.num}
+                className={`reveal reveal-d${Math.min(i + 1, 6)} process-step`}
+                style={{
+                  alignItems: 'center',
+                  padding: '36px 48px 36px 100px',
+                  border: '1px solid rgba(255,255,255,0.07)',
+                  borderRadius: 24,
+                  background: 'rgba(255,255,255,0.02)',
+                  transition: 'all 0.4s ease',
+                  cursor: 'default',
+                  position: 'relative',
+                }}
+                onMouseEnter={e => {
+                  e.currentTarget.style.background = 'rgba(180,253,131,0.03)';
+                  e.currentTarget.style.borderColor = 'rgba(180,253,131,0.2)';
+                  e.currentTarget.style.boxShadow = '0 20px 60px rgba(0,0,0,0.4)';
+                }}
+                onMouseLeave={e => {
+                  e.currentTarget.style.background = 'rgba(255,255,255,0.02)';
+                  e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)';
+                  e.currentTarget.style.boxShadow = '';
+                }}
+              >
+                {/* Step number circle - overlapping the vertical line */}
+                <div style={{
+                  position: 'absolute', left: 16, top: '50%', transform: 'translateY(-50%)',
+                  width: 48, height: 48, borderRadius: '50%',
+                  background: '#000', border: '1px solid rgba(180,253,131,0.3)',
+                  display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  zIndex: 1,
+                }}>
+                  <span style={{ fontSize: 11, fontWeight: 800, color: '#b4fd83', letterSpacing: '0.05em' }}>{step.num}</span>
                 </div>
-              </div>
 
-              {/* Title + Desc */}
-              <div>
-                <h3 style={{ fontSize: 22, fontWeight: 600, color: '#fff', marginBottom: 10, letterSpacing: '-0.02em' }}>{step.title}</h3>
-                <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.4)', lineHeight: 1.7, margin: 0 }}>{step.desc}</p>
-              </div>
-
-              {/* Checklist */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-                {step.items.map(item => (
-                  <div key={item} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                    <div style={{ width: 18, height: 18, borderRadius: '50%', background: 'rgba(180,253,131,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
-                      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#b4fd83" strokeWidth="3"><path d="M20 6L9 17l-5-5" /></svg>
-                    </div>
-                    <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', fontWeight: 500 }}>{item}</span>
+                {/* Icon */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 12, alignItems: 'flex-start', flexShrink: 0 }}>
+                  <div style={{ width: 48, height: 48, borderRadius: 14, background: 'rgba(180,253,131,0.08)', border: '1px solid rgba(180,253,131,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    {step.icon}
                   </div>
-                ))}
-              </div>
+                </div>
 
-              {/* Duration badge */}
-              <div style={{ display: 'flex', justifyContent: 'flex-end' }} className="process-duration">
-                <div style={{ padding: '10px 20px', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 100, fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.35)', whiteSpace: 'nowrap' }}>
-                  ⏱ {step.duration}
+                {/* Title + Desc */}
+                <div>
+                  <h3 style={{ fontSize: 22, fontWeight: 600, color: '#fff', marginBottom: 10, letterSpacing: '-0.02em' }}>{step.title}</h3>
+                  <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.4)', lineHeight: 1.7, margin: 0 }}>{step.desc}</p>
+                </div>
+
+                {/* Checklist */}
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+                  {step.items.map(item => (
+                    <div key={item} style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+                      <div style={{ width: 18, height: 18, borderRadius: '50%', background: 'rgba(180,253,131,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#b4fd83" strokeWidth="3"><path d="M20 6L9 17l-5-5" /></svg>
+                      </div>
+                      <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', fontWeight: 500 }}>{item}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Duration badge */}
+                <div style={{ display: 'flex', justifyContent: 'flex-end' }} className="process-duration">
+                  <div style={{ padding: '10px 20px', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 100, fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.35)', whiteSpace: 'nowrap' }}>
+                    ⏱ {step.duration}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

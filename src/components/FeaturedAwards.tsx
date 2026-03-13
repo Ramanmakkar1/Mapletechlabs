@@ -89,7 +89,18 @@ export default function FeaturedAwards() {
         </div>
 
         {/* Awards grid */}
-        <div className="reveal reveal-d1 awards-grid">
+        <div className="reveal reveal-d1" style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: 12 }}
+          ref={el => {
+            if (!el) return;
+            const update = () => {
+              const w = el.offsetWidth;
+              el.style.gridTemplateColumns = w < 480 ? 'repeat(2,1fr)' : w < 768 ? 'repeat(3,1fr)' : w < 1200 ? 'repeat(4,1fr)' : 'repeat(6,1fr)';
+            };
+            update();
+            const ro = new ResizeObserver(update);
+            ro.observe(el);
+          }}
+        >
           {awards.map((award, i) => (
             <div
               key={award.name}

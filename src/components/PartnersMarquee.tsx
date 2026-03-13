@@ -1,49 +1,25 @@
 'use client';
 
-import { useState } from 'react';
-
-const partners: { name: string; domain: string }[] = [
-  { name: 'Stripe', domain: 'stripe.com' },
-  { name: 'Shopify', domain: 'shopify.com' },
-  { name: 'Salesforce', domain: 'salesforce.com' },
-  { name: 'Microsoft', domain: 'microsoft.com' },
-  { name: 'Google Cloud', domain: 'cloud.google.com' },
-  { name: 'AWS', domain: 'aws.amazon.com' },
-  { name: 'Twilio', domain: 'twilio.com' },
-  { name: 'HubSpot', domain: 'hubspot.com' },
-  { name: 'Zendesk', domain: 'zendesk.com' },
-  { name: 'Atlassian', domain: 'atlassian.com' },
-  { name: 'Datadog', domain: 'datadoghq.com' },
-  { name: 'Vercel', domain: 'vercel.com' },
-  { name: 'MongoDB', domain: 'mongodb.com' },
-  { name: 'Cloudflare', domain: 'cloudflare.com' },
-  { name: 'Figma', domain: 'figma.com' },
+const partners = [
+  'Stripe', 'Shopify', 'Salesforce', 'Microsoft', 'Google Cloud',
+  'AWS', 'Twilio', 'HubSpot', 'Zendesk', 'Atlassian',
+  'Datadog', 'Vercel', 'MongoDB', 'Cloudflare', 'Figma',
 ];
 
-function PartnerLogo({ name, domain }: { name: string; domain: string }) {
-  const [failed, setFailed] = useState(false);
-  const logoSrc = `https://logo.clearbit.com/${domain}`;
-
+function PartnerPill({ name }: { name: string }) {
   return (
-    <div style={{
-      display: 'flex', alignItems: 'center', justifyContent: 'center',
-      padding: '10px 24px', border: '1px solid rgba(255,255,255,0.07)',
-      borderRadius: 100, minWidth: 100, height: 42,
-      background: 'rgba(255,255,255,0.02)', transition: '0.3s', cursor: 'default',
-    }}
-      onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)'; e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; }}
-      onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)'; e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; }}
+    <div
+      style={{
+        display: 'flex', alignItems: 'center', justifyContent: 'center',
+        padding: '10px 28px', border: '1px solid rgba(255,255,255,0.08)',
+        borderRadius: 100, minWidth: 120, height: 44, flexShrink: 0,
+        background: 'rgba(255,255,255,0.02)', transition: '0.3s', cursor: 'default',
+        whiteSpace: 'nowrap' as const,
+      }}
+      onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.18)'; e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; }}
+      onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; }}
     >
-      {failed ? (
-        <span style={{ fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.35)', whiteSpace: 'nowrap' }}>{name}</span>
-      ) : (
-        <img
-          src={logoSrc}
-          alt={name}
-          style={{ height: 18, width: 'auto', maxWidth: 80, objectFit: 'contain', filter: 'brightness(0) invert(0.6)' }}
-          onError={() => setFailed(true)}
-        />
-      )}
+      <span style={{ fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.4)', letterSpacing: '-0.01em' }}>{name}</span>
     </div>
   );
 }
@@ -63,14 +39,14 @@ export default function PartnersMarquee() {
       </div>
 
       <div style={{ marginBottom: 10, display: 'flex', gap: 10, width: 'max-content', animation: 'marquee-l 40s linear infinite' }}>
-        {[...partners, ...partners].map((p, i) => (
-          <PartnerLogo key={`${p.domain}-${i}`} name={p.name} domain={p.domain} />
+        {[...partners, ...partners].map((name, i) => (
+          <PartnerPill key={`${name}-${i}`} name={name} />
         ))}
       </div>
 
       <div style={{ display: 'flex', gap: 10, width: 'max-content', animation: 'marquee-r 45s linear infinite' }}>
-        {[...partners.slice(8), ...partners, ...partners.slice(0, 8)].map((p, i) => (
-          <PartnerLogo key={`${p.domain}-r-${i}`} name={p.name} domain={p.domain} />
+        {[...partners.slice(8), ...partners, ...partners.slice(0, 8)].map((name, i) => (
+          <PartnerPill key={`${name}-r-${i}`} name={name} />
         ))}
       </div>
     </section>

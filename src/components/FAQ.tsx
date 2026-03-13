@@ -1,49 +1,111 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const faqs = [
-  { q: 'What is your typical project timeline?', a: 'Most projects range from 8 to 16 weeks depending on complexity. Small features or MVPs can be delivered faster.' },
-  { q: 'Do you offer ongoing support?', a: 'Yes, we provide maintenance and support packages to ensure your systems remain secure and high-performing.' },
-  { q: 'How do you handle project management?', a: 'We use Agile methodologies with weekly sprints, transparent communication via Slack/Jira, and regular demos.' },
-  { q: 'Can you work with existing codebases?', a: 'Absolutely. We often help clients refactor, scale, or add features to their current legacy systems.' },
+  {
+    q: 'How long does a typical project take?',
+    a: 'Projects range from 6 weeks for focused MVPs to 6+ months for enterprise platforms. After discovery, we give you a precise timeline with milestones — no vague estimates.',
+  },
+  {
+    q: 'How do you handle project communication?',
+    a: 'We run weekly demos, maintain a shared Notion workspace, and have a dedicated Slack channel. You always have full visibility into progress, blockers, and decisions.',
+  },
+  {
+    q: 'Do you work with existing codebases?',
+    a: 'Yes — we do audits, refactors, and feature work on existing systems regularly. We will always be honest if we think a rebuild is the better path.',
+  },
+  {
+    q: 'What is your tech stack?',
+    a: 'We are stack-agnostic and choose technology based on your requirements. Our core strengths include React, Next.js, Node.js, Python, AWS, and most modern cloud infrastructure.',
+  },
+  {
+    q: 'Do you provide post-launch support?',
+    a: 'Yes. We offer monthly retainers for ongoing development, maintenance, and support. Most clients continue with us long after launch.',
+  },
+  {
+    q: 'How is pricing structured?',
+    a: 'We offer fixed-price projects for well-defined scope, and time-and-materials for evolving products. We are transparent about costs from day one — no surprise invoices.',
+  },
 ];
 
 export default function FAQ() {
-  const [open, setOpen] = useState<number | null>(0);
+  const [open, setOpen] = useState<number | null>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    gsap.from('.faq-heading', {
+      opacity: 0, y: 40, duration: 0.9, ease: 'power3.out',
+      scrollTrigger: { trigger: '.faq-heading', start: 'top 80%' },
+    });
+    gsap.from('.faq-item', {
+      opacity: 0, y: 20, duration: 0.6, stagger: 0.08, ease: 'power2.out',
+      scrollTrigger: { trigger: '.faq-list', start: 'top 80%' },
+    });
+  }, { scope: containerRef });
+
+  const toggle = (i: number) => {
+    setOpen(prev => prev === i ? null : i);
+  };
 
   return (
-    <section className="py-24 lg:py-32 bg-gray-50/30 overflow-hidden">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-violet-600 mb-4">Common Questions</p>
-          <h2 className="text-3xl lg:text-5xl font-black text-gray-900 tracking-tight">
-            Frequently Asked <span className="text-gray-400">Questions</span>
+    <section id="faq" className="section-light py-24 lg:py-32 relative overflow-hidden" ref={containerRef}>
+      <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-violet-50 rounded-full blur-[100px] opacity-60 translate-x-1/3 -translate-y-1/2 pointer-events-none" />
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="faq-heading text-center mb-16">
+          <p className="text-xs font-bold uppercase tracking-[0.25em] text-violet-600 mb-4">FAQ</p>
+          <h2 className="text-4xl lg:text-6xl font-black text-gray-900 tracking-tight leading-tight">
+            Questions?<br />
+            <span className="gradient-text">We have answers.</span>
           </h2>
         </div>
 
-        <div className="space-y-4">
+        <div className="faq-list space-y-3">
           {faqs.map((faq, i) => (
-            <div key={i} className={`rounded-2xl border transition-all duration-300 ${open === i ? 'bg-white border-violet-200 shadow-xl shadow-gray-200/50' : 'bg-transparent border-gray-100 hover:border-gray-200'}`}>
+            <div
+              key={i}
+              className={`faq-item rounded-2xl border transition-all duration-300 overflow-hidden ${
+                open === i ? 'border-violet-200 bg-violet-50/50 shadow-lg shadow-violet-100/50' : 'border-gray-100 bg-white hover:border-gray-200'
+              }`}
+            >
               <button
-                onClick={() => setOpen(open === i ? null : i)}
-                className="w-full flex items-center justify-between p-6 text-left"
+                onClick={() => toggle(i)}
+                className="w-full flex items-center justify-between px-6 py-5 text-left"
               >
-                <span className={`font-bold text-lg ${open === i ? 'text-violet-600' : 'text-gray-700'}`}>{faq.q}</span>
-                <span className={`w-8 h-8 rounded-full flex items-center justify-center transition-transform duration-300 ${open === i ? 'bg-violet-600 text-white rotate-180' : 'bg-gray-100 text-gray-500'}`}>
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
+                <span className={`text-base font-bold transition-colors ${open === i ? 'text-violet-700' : 'text-gray-900'}`}>
+                  {faq.q}
                 </span>
-              </button>
-              {open === i && (
-                <div className="px-6 pb-6 animate-in fade-in slide-in-from-top-2 duration-300">
-                  <p className="text-gray-600 leading-relaxed">{faq.a}</p>
+                <div className={`w-8 h-8 rounded-full flex-shrink-0 ml-4 flex items-center justify-center transition-all duration-300 ${
+                  open === i ? 'bg-violet-600 rotate-45' : 'bg-gray-100'
+                }`}>
+                  <svg className={`w-4 h-4 transition-colors ${open === i ? 'text-white' : 'text-gray-500'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                  </svg>
                 </div>
-              )}
+              </button>
+
+              <div
+                className="overflow-hidden transition-all duration-400"
+                style={{ maxHeight: open === i ? '200px' : '0', opacity: open === i ? 1 : 0 }}
+              >
+                <p className="px-6 pb-6 text-gray-600 text-sm leading-relaxed">{faq.a}</p>
+              </div>
             </div>
           ))}
         </div>
+
+        <p className="text-center mt-10 text-gray-400 text-sm">
+          Still have questions?{' '}
+          <a href="#contact" className="text-violet-600 font-semibold hover:underline underline-offset-2">
+            Talk to our team →
+          </a>
+        </p>
       </div>
     </section>
   );

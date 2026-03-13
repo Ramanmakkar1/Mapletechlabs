@@ -2,126 +2,128 @@
 
 import { useRef } from 'react';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 
+gsap.registerPlugin(ScrollTrigger);
+
 const stats = [
-  { value: '200+', label: 'Projects delivered' },
-  { value: '50+', label: 'Clients' },
-  { value: '8+', label: 'Years experience' },
-  { value: '99%', label: 'Client retention' },
+  { value: 200, suffix: '+', label: 'Projects Delivered', color: '#7c3aed' },
+  { value: 50, suffix: '+', label: 'Global Clients', color: '#4f46e5' },
+  { value: 8, suffix: '+', label: 'Years of Excellence', color: '#06b6d4' },
+  { value: 99, suffix: '%', label: 'Client Retention Rate', color: '#10b981' },
 ];
 
 const pillars = [
-  { title: 'Discover', desc: 'We start with deep discovery to understand your business, constraints, and vision before writing a single line of code.' },
-  { title: 'Design & Build', desc: 'Strategic design paired with robust engineering. We build systems that perform today and scale tomorrow.' },
-  { title: 'Launch & Support', desc: 'Smooth deployment and ongoing optimization. Your success doesn\'t end at go-live.' },
+  { title: 'Discover', desc: 'We start with deep discovery — understanding your business, users, and constraints before writing a single line of code.', icon: '🔍' },
+  { title: 'Design & Build', desc: 'Strategic design paired with battle-tested engineering. Systems that perform today and scale for tomorrow.', icon: '⚙️' },
+  { title: 'Launch & Grow', desc: 'Smooth deployment, monitoring, and ongoing optimization. Your success extends far beyond launch day.', icon: '🚀' },
 ];
 
 export default function About() {
-  const container = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    gsap.from('.stat-item', {
-      opacity: 0,
-      y: 20,
-      duration: 0.6,
-      stagger: 0.1,
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: '.stats-grid',
-        start: 'top 85%',
-      }
+    // Animated counters
+    stats.forEach((stat, i) => {
+      const counter = { val: 0 };
+      gsap.to(counter, {
+        val: stat.value,
+        duration: 2,
+        ease: 'power2.out',
+        snap: { val: 1 },
+        scrollTrigger: { trigger: '.stats-strip', start: 'top 80%', once: true },
+        onUpdate() {
+          const el = document.querySelector(`.stat-val-${i}`) as HTMLElement;
+          if (el) el.textContent = Math.round(counter.val) + stat.suffix;
+        },
+      });
+      gsap.from(`.stat-item-${i}`, {
+        opacity: 0, y: 30, duration: 0.7, delay: i * 0.12, ease: 'power3.out',
+        scrollTrigger: { trigger: '.stats-strip', start: 'top 80%', once: true },
+      });
     });
 
-    gsap.from('.about-content > *', {
-      opacity: 0,
-      x: -30,
-      duration: 0.8,
-      stagger: 0.15,
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: '.about-section',
-        start: 'top 75%',
-      }
+    // About text slide in
+    gsap.from('.about-text > *', {
+      opacity: 0, x: -40, duration: 0.8, stagger: 0.12, ease: 'power3.out',
+      scrollTrigger: { trigger: '.about-text', start: 'top 78%' },
     });
 
-    gsap.from('.pillar-item', {
-      opacity: 0,
-      x: 30,
-      duration: 0.8,
-      stagger: 0.2,
-      ease: 'power2.out',
-      scrollTrigger: {
-        trigger: '.pillars-container',
-        start: 'top 75%',
-      }
+    // Pillars
+    gsap.from('.pillar', {
+      opacity: 0, x: 40, duration: 0.8, stagger: 0.15, ease: 'power3.out',
+      scrollTrigger: { trigger: '.pillars', start: 'top 78%' },
     });
-  }, { scope: container });
+
+  }, { scope: containerRef });
 
   return (
-    <div ref={container}>
-      {/* Stats — clean horizontal strip */}
-      <section className="border-y border-gray-100 bg-gray-50/50 stats-grid">
+    <div ref={containerRef}>
+      {/* Stats strip — dark */}
+      <div className="stats-strip section-dark border-t border-white/5">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-gray-100">
-            {stats.map((stat) => (
-              <div key={stat.label} className="stat-item py-12 lg:py-16 px-6 lg:px-10 text-center lg:text-left">
-                <div className="text-3xl lg:text-5xl font-bold text-gray-900 tabular-nums mb-1">{stat.value}</div>
-                <div className="text-sm font-medium text-gray-500 uppercase tracking-widest">{stat.label}</div>
+          <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-white/5">
+            {stats.map((stat, i) => (
+              <div key={stat.label} className={`stat-item-${i} py-14 lg:py-20 px-6 lg:px-10 text-center lg:text-left`}>
+                <div className={`stat-val-${i} text-4xl lg:text-6xl font-black tabular-nums mb-2`} style={{ color: stat.color }}>
+                  0{stat.suffix}
+                </div>
+                <div className="text-white/40 text-xs font-bold uppercase tracking-widest">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* About + Approach */}
-      <section id="about" className="about-section py-24 lg:py-32 bg-white relative overflow-hidden">
-        <div className="absolute top-1/2 left-0 w-96 h-96 bg-indigo-50/50 blur-[100px] rounded-full -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
-        
+      {/* About section — light */}
+      <section id="about" className="section-light py-24 lg:py-32 relative overflow-hidden">
+        <div className="absolute top-1/2 left-0 w-80 h-80 bg-indigo-50 rounded-full blur-[100px] opacity-80 -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
-            <div className="about-content">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-violet-600 mb-4">Who we are</p>
-              <h2 className="text-3xl lg:text-5xl font-black text-gray-900 tracking-tight mb-8 leading-tight">
-                Your strategic <br />
-                <span className="gradient-text">technology partner</span>
+
+            <div className="about-text space-y-6">
+              <p className="text-xs font-bold uppercase tracking-[0.25em] text-violet-600">Who We Are</p>
+              <h2 className="text-4xl lg:text-5xl font-black text-gray-900 tracking-tight leading-tight">
+                Your strategic<br />
+                <span className="gradient-text">technology partner.</span>
               </h2>
-              <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                Mapletech Labs builds software that fits your business. We combine technical depth with product thinking to deliver solutions that drive measurable outcomes.
+              <p className="text-gray-600 text-lg leading-relaxed">
+                Mapletech Labs is a Toronto-based software agency combining deep technical expertise with genuine product thinking. We build systems that solve real problems and deliver measurable outcomes.
               </p>
-              <p className="text-gray-500 text-base leading-relaxed mb-12">
-                From startups to enterprise, we work with AI, cloud, and modern frameworks to solve real problems — without the hype.
+              <p className="text-gray-500 text-base leading-relaxed">
+                From pre-seed startups moving fast to Fortune 500 enterprises modernizing at scale — we adapt our process to your context, not the other way around.
               </p>
               <div className="p-6 rounded-2xl bg-gray-50 border border-gray-100">
-                <p className="text-xs font-bold uppercase tracking-[0.15em] text-gray-400 mb-4">Trusted by Industry Leaders</p>
-                <div className="flex flex-wrap gap-x-8 gap-y-4 text-sm font-bold text-gray-400">
-                  <span>Great American</span>
-                  <span>Disney</span>
-                  <span>JLL</span>
-                  <span>Innovatech</span>
-                  <span>NexaCorp</span>
+                <p className="text-xs font-bold uppercase tracking-[0.15em] text-gray-400 mb-4">Trusted by</p>
+                <div className="flex flex-wrap gap-x-8 gap-y-3 text-sm font-bold text-gray-400">
+                  {['Great American', 'Disney', 'JLL', 'Innovatech', 'NexaCorp', 'FinanceHub'].map(c => (
+                    <span key={c} className="hover:text-gray-600 transition-colors cursor-default">{c}</span>
+                  ))}
                 </div>
               </div>
             </div>
 
-            <div className="pillars-container">
-              <p className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-10">Our methodology</p>
-              <div className="space-y-10">
-                {pillars.map((p, i) => (
-                  <div key={p.title} className="pillar-item flex gap-8 group">
-                    <span className="text-xl font-black text-violet-100 group-hover:text-violet-500 transition-colors duration-300 tabular-nums flex-shrink-0 pt-0.5">0{i + 1}</span>
-                    <div>
-                      <h4 className="font-bold text-gray-900 text-xl mb-3">{p.title}</h4>
-                      <p className="text-gray-600 text-base leading-relaxed">{p.desc}</p>
+            <div className="pillars space-y-1">
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400 mb-8">Our Methodology</p>
+              {pillars.map((p, i) => (
+                <div key={p.title} className="pillar group flex gap-6 p-6 rounded-2xl hover:bg-gray-50 transition-all duration-300 cursor-default">
+                  <div className="text-3xl flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-300">{p.icon}</div>
+                  <div>
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className="text-xs font-black text-violet-400 tabular-nums">0{i + 1}</span>
+                      <h4 className="font-black text-gray-900 text-xl">{p.title}</h4>
                     </div>
+                    <p className="text-gray-600 text-base leading-relaxed">{p.desc}</p>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
+
           </div>
         </div>
       </section>
     </div>
   );
 }
-

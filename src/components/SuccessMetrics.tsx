@@ -50,7 +50,7 @@ function StatCard({ s, index, active }: { s: typeof stats[0]; index: number; act
         <span style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2.5rem)', fontWeight: 700, color: '#b4fd83' }}>{s.suffix}</span>
       </div>
       <div style={{ fontSize: 14, fontWeight: 700, color: '#fff', letterSpacing: '-0.01em', marginBottom: 10 }}>{s.label}</div>
-      <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.35)', lineHeight: 1.6 }}>{s.desc}</div>
+      <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.75)', lineHeight: 1.6 }}>{s.desc}</div>
     </div>
   );
 }
@@ -84,7 +84,7 @@ export default function SuccessMetrics() {
               The Results<br /><span style={{ color: 'rgba(255,255,255,0.2)' }}>Speak Loudly.</span>
             </h2>
           </div>
-          <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.4)', maxWidth: 360, lineHeight: 1.7, margin: 0 }}>
+          <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.7)', maxWidth: 360, lineHeight: 1.7, margin: 0 }}>
             A decade of engineering excellence, measured in outcomes — not outputs.
           </p>
         </div>

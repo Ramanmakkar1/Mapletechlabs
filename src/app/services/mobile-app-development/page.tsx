@@ -199,7 +199,7 @@ export default function MobileAppDevelopmentPage() {
                   We Build Apps<br />That Drive<br /><span style={{ color: '#b4fd83' }}>Real Revenue.</span>
                 </h1>
 
-                <p className="reveal reveal-d2" style={{ fontSize: 17, color: 'rgba(255,255,255,0.45)', lineHeight: 1.75, maxWidth: 480, margin: '0 0 40px' }}>
+                <p className="reveal reveal-d2" style={{ fontSize: 17, color: 'rgba(255,255,255,0.75)', lineHeight: 1.75, maxWidth: 480, margin: '0 0 40px' }}>
                   From MVP to millions of users — we engineer iOS, Android and cross-platform apps that your customers love and your investors notice.
                 </p>
 
@@ -244,7 +244,7 @@ export default function MobileAppDevelopmentPage() {
                     <div style={{ flex: 1, borderRadius: 16, background: 'rgba(180,253,131,0.05)', border: '1px solid rgba(180,253,131,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                       <div style={{ textAlign: 'center' }}>
                         <div style={{ fontSize: 28, fontWeight: 700, color: '#b4fd83', letterSpacing: '-0.03em' }}>$2.4M</div>
-                        <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.4)', marginTop: 4 }}>Revenue This Month</div>
+                        <div style={{ fontSize: 10, color: 'rgba(255,255,255,0.7)', marginTop: 4 }}>Revenue This Month</div>
                       </div>
                     </div>
                     <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 8 }}>
@@ -310,7 +310,7 @@ export default function MobileAppDevelopmentPage() {
                   <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: `linear-gradient(90deg,${s.accent},transparent)` }} />
                   <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: s.accent, background: `${s.accent}14`, padding: '5px 14px', borderRadius: 100, marginBottom: 24, display: 'inline-block' }}>{s.tag}</span>
                   <h3 style={{ fontSize: 'clamp(1.5rem,2.5vw,2rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.03em', marginBottom: 16 }}>{s.title}</h3>
-                  <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.45)', lineHeight: 1.75, marginBottom: 32 }}>{s.desc}</p>
+                  <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.75)', lineHeight: 1.75, marginBottom: 32 }}>{s.desc}</p>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
                     {s.chips.map(c => <span key={c} style={{ fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.5)', padding: '6px 14px', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 100 }}>{c}</span>)}
                   </div>
@@ -327,7 +327,7 @@ export default function MobileAppDevelopmentPage() {
                   <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: `linear-gradient(90deg,${s.accent},transparent)` }} />
                   <span style={{ fontSize: 10, fontWeight: 700, color: s.accent, letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 16, display: 'block' }}>{s.tag}</span>
                   <h3 style={{ fontSize: 17, fontWeight: 600, color: '#fff', letterSpacing: '-0.02em', marginBottom: 12 }}>{s.title}</h3>
-                  <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)', lineHeight: 1.7, margin: 0 }}>{s.desc}</p>
+                  <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, margin: 0 }}>{s.desc}</p>
                 </div>
               ))}
             </div>
@@ -346,7 +346,7 @@ export default function MobileAppDevelopmentPage() {
                   Built-In From<br /><span style={{ color: 'rgba(255,255,255,0.2)' }}>Day One.</span>
                 </h2>
               </div>
-              <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.4)', maxWidth: 380, lineHeight: 1.75, margin: 0 }}>
+              <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)', maxWidth: 380, lineHeight: 1.75, margin: 0 }}>
                 Every feature your app needs to compete — engineered natively, not bolted on.
               </p>
             </div>
@@ -394,10 +394,10 @@ export default function MobileAppDevelopmentPage() {
                         <h3 style={{ fontSize: 22, fontWeight: 600, color: '#fff', letterSpacing: '-0.02em', margin: 0 }}>{step.title}</h3>
                         <span style={{ fontSize: 11, fontWeight: 700, color: '#b4fd83', background: 'rgba(180,253,131,0.1)', padding: '5px 14px', borderRadius: 100, whiteSpace: 'nowrap' as const }}>{step.duration}</span>
                       </div>
-                      <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.45)', lineHeight: 1.75, marginBottom: 24 }}>{step.desc}</p>
+                      <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.75)', lineHeight: 1.75, marginBottom: 24 }}>{step.desc}</p>
                       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
                         {step.deliverables.map(d => (
-                          <span key={d} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.45)', padding: '6px 14px', border: '1px solid rgba(255,255,255,0.09)', borderRadius: 100 }}>
+                          <span key={d} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.75)', padding: '6px 14px', border: '1px solid rgba(255,255,255,0.09)', borderRadius: 100 }}>
                             <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="#b4fd83" strokeWidth="3"><path d="M20 6L9 17l-5-5" /></svg>
                             {d}
                           </span>
@@ -423,7 +423,7 @@ export default function MobileAppDevelopmentPage() {
                   The Stack Behind<br /><span style={{ color: 'rgba(255,255,255,0.2)' }}>Your App.</span>
                 </h2>
               </div>
-              <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.4)', maxWidth: 360, lineHeight: 1.75, margin: 0 }}>
+              <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)', maxWidth: 360, lineHeight: 1.75, margin: 0 }}>
                 Best-in-class tools chosen for performance, reliability, and long-term maintainability.
               </p>
             </div>
@@ -465,7 +465,7 @@ export default function MobileAppDevelopmentPage() {
                   onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.07)'; e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
                   <div style={{ fontSize: 28, marginBottom: 16 }}>{ind.icon}</div>
                   <h3 style={{ fontSize: 18, fontWeight: 600, color: '#fff', letterSpacing: '-0.02em', marginBottom: 10 }}>{ind.title}</h3>
-                  <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.4)', lineHeight: 1.7, margin: 0 }}>{ind.desc}</p>
+                  <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, margin: 0 }}>{ind.desc}</p>
                 </div>
               ))}
             </div>
@@ -514,7 +514,7 @@ export default function MobileAppDevelopmentPage() {
                   <button onClick={() => setOpenFaq(openFaq === i ? null : i)} style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '24px 28px', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit' }}>
                     <span style={{ fontSize: 16, fontWeight: 500, color: '#fff', textAlign: 'left', letterSpacing: '-0.01em' }}>{faq.q}</span>
                     <div style={{ width: 30, height: 30, borderRadius: '50%', background: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, transition: 'transform 0.3s', transform: openFaq === i ? 'rotate(45deg)' : 'none' }}>
-                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke={openFaq === i ? '#b4fd83' : 'rgba(255,255,255,0.4)'} strokeWidth="2"><path d="M12 5v14M5 12h14" /></svg>
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke={openFaq === i ? '#b4fd83' : 'rgba(255,255,255,0.7)'} strokeWidth="2"><path d="M12 5v14M5 12h14" /></svg>
                     </div>
                   </button>
                   {openFaq === i && (
@@ -558,7 +558,7 @@ export default function MobileAppDevelopmentPage() {
               {['NDA on Day 1', 'Fixed-Price Guarantee', '48hr Proposal', 'No Commitment'].map(t => (
                 <div key={t} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#b4fd83" strokeWidth="2.5"><path d="M20 6L9 17l-5-5" /></svg>
-                  <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.35)', fontWeight: 500 }}>{t}</span>
+                  <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.75)', fontWeight: 500 }}>{t}</span>
                 </div>
               ))}
             </div>

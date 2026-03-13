@@ -68,15 +68,15 @@ export default function TestimonialsSection() {
               Trusted by People<br /><span style={{ color: 'rgba(255,255,255,0.2)' }}>Changing the World.</span>
             </h2>
             <div>
-              <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.4)', lineHeight: 1.7, margin: '0 0 24px' }}>
+              <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, margin: '0 0 24px' }}>
                 Hear directly from the founders and CTOs who've shipped with us.
               </p>
               {/* Aggregate rating */}
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: 12, padding: '12px 20px', border: '1px solid rgba(180,253,131,0.2)', borderRadius: 100, background: 'rgba(180,253,131,0.05)' }}>
                 <Stars count={5} />
                 <span style={{ fontSize: 14, fontWeight: 700, color: '#fff' }}>4.9</span>
-                <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)' }}>·</span>
-                <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)' }}>500+ reviews on Clutch</span>
+                <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.7)' }}>·</span>
+                <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.7)' }}>500+ reviews on Clutch</span>
               </div>
             </div>
           </div>

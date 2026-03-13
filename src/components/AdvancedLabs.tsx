@@ -27,7 +27,7 @@ export default function AdvancedLabs() {
             <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 20 }}>
               Pioneering the<br /><span style={{ color: 'rgba(255,255,255,0.2)' }}>Edge of Innovation.</span>
             </h2>
-            <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.4)', lineHeight: 1.7, marginBottom: 56 }}>
+            <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, marginBottom: 56 }}>
               Our dedicated R&D division builds the emerging technology that will define the next decade of software.
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 36 }}>
@@ -36,7 +36,7 @@ export default function AdvancedLabs() {
                   <div style={{ width: 2, flexShrink: 0, background: 'linear-gradient(to bottom, #b4fd83, rgba(180,253,131,0.1))', borderRadius: 10, minHeight: 60 }} />
                   <div>
                     <h4 style={{ fontSize: 17, fontWeight: 600, color: '#fff', marginBottom: 8, letterSpacing: '-0.02em' }}>{f.title}</h4>
-                    <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.4)', lineHeight: 1.7, margin: 0 }}>{f.desc}</p>
+                    <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, margin: 0 }}>{f.desc}</p>
                   </div>
                 </div>
               ))}

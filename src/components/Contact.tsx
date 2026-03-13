@@ -43,7 +43,7 @@ export default function Contact() {
               <span style={{ color: '#b4fd83' }}>Conversation Away.</span>
             </h2>
 
-            <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.4)', lineHeight: 1.6, margin: '0 0 32px' }}>
+            <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, margin: '0 0 32px' }}>
               Tell us about your project and we&apos;ll scope it, plan it, and build it — on time, on budget, every time.
             </p>
 
@@ -56,7 +56,7 @@ export default function Contact() {
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
               </a>
               <Link href="/services/mobile-app-development" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 52, padding: '0 28px', borderRadius: 100, border: '1px solid rgba(255,255,255,0.15)', color: '#fff', fontSize: 14, fontWeight: 500, textDecoration: 'none', transition: '0.3s' }}
-                onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.4)'; }}
+                onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.7)'; }}
                 onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)'; }}
               >
                 View Services
@@ -69,7 +69,7 @@ export default function Contact() {
                   <div style={{ width: 18, height: 18, borderRadius: '50%', background: 'rgba(180,253,131,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#b4fd83" strokeWidth="3"><path d="M20 6L9 17l-5-5" /></svg>
                   </div>
-                  <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.45)', fontWeight: 500 }}>{item}</span>
+                  <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.75)', fontWeight: 500 }}>{item}</span>
                 </div>
               ))}
             </div>

@@ -49,7 +49,7 @@ export default function Footer() {
                 style={{ height: 40, width: 'auto', objectFit: 'contain', filter: 'brightness(0) invert(1)' }}
               />
             </div>
-            <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.4)', lineHeight: 1.7, maxWidth: 300, marginBottom: 28 }}>
+            <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, maxWidth: 300, marginBottom: 28 }}>
               World-class software engineering for the companies shaping tomorrow. Offices across 12 countries.
             </p>
 
@@ -63,9 +63,9 @@ export default function Footer() {
             <div style={{ display: 'flex', gap: 10 }}>
               {socials.map(s => (
                 <a key={s.label} href={s.href} target="_blank" rel="noopener noreferrer"
-                  style={{ width: 38, height: 38, borderRadius: '50%', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'rgba(255,255,255,0.4)', textDecoration: 'none', transition: '0.25s' }}
+                  style={{ width: 38, height: 38, borderRadius: '50%', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'rgba(255,255,255,0.7)', textDecoration: 'none', transition: '0.25s' }}
                   onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(180,253,131,0.4)'; e.currentTarget.style.color = '#b4fd83'; e.currentTarget.style.background = 'rgba(180,253,131,0.08)'; }}
-                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'; e.currentTarget.style.color = 'rgba(255,255,255,0.4)'; e.currentTarget.style.background = 'transparent'; }}
+                  onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)'; e.currentTarget.style.color = 'rgba(255,255,255,0.7)'; e.currentTarget.style.background = 'transparent'; }}
                   aria-label={s.label}
                 >
                   {s.icon}
@@ -80,9 +80,9 @@ export default function Footer() {
               <div style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.3)', textTransform: 'uppercase', letterSpacing: '0.12em', marginBottom: 28 }}>{col.title}</div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
                 {col.links.map(([label, href]) => (
-                  <Link key={label} href={href} style={{ fontSize: 14, color: 'rgba(255,255,255,0.45)', textDecoration: 'none', transition: '0.2s' }}
+                  <Link key={label} href={href} style={{ fontSize: 14, color: 'rgba(255,255,255,0.75)', textDecoration: 'none', transition: '0.2s' }}
                     onMouseEnter={e => { e.currentTarget.style.color = '#fff'; }}
-                    onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.45)'; }}
+                    onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.75)'; }}
                   >{label}</Link>
                 ))}
               </div>

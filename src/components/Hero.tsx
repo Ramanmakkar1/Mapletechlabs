@@ -7,12 +7,12 @@ import { useGSAP } from '@gsap/react';
 const words = ['Mobile Apps', 'Web Platforms', 'AI Systems', 'SaaS Products', 'Fintech Tools'];
 
 const codeLines = [
-  { indent: 0, tokens: [{ t: 'const ', c: '#b4fd83' }, { t: 'app ', c: '#fff' }, { t: '= ', c: 'rgba(255,255,255,0.4)' }, { t: 'await ', c: '#b4fd83' }, { t: 'build(', c: '#fff' }, { t: '{', c: 'rgba(255,255,255,0.4)' }] },
+  { indent: 0, tokens: [{ t: 'const ', c: '#b4fd83' }, { t: 'app ', c: '#fff' }, { t: '= ', c: 'rgba(255,255,255,0.7)' }, { t: 'await ', c: '#b4fd83' }, { t: 'build(', c: '#fff' }, { t: '{', c: 'rgba(255,255,255,0.7)' }] },
   { indent: 1, tokens: [{ t: 'stack: ', c: 'rgba(255,255,255,0.5)' }, { t: '"Next.js + AI"', c: '#b4fd83' }, { t: ',', c: 'rgba(255,255,255,0.3)' }] },
   { indent: 1, tokens: [{ t: 'deploy: ', c: 'rgba(255,255,255,0.5)' }, { t: '"AWS"', c: '#b4fd83' }, { t: ',', c: 'rgba(255,255,255,0.3)' }] },
   { indent: 1, tokens: [{ t: 'timeline: ', c: 'rgba(255,255,255,0.5)' }, { t: '"8 weeks"', c: '#b4fd83' }, { t: ',', c: 'rgba(255,255,255,0.3)' }] },
   { indent: 1, tokens: [{ t: 'price: ', c: 'rgba(255,255,255,0.5)' }, { t: '"Fixed"', c: '#b4fd83' }] },
-  { indent: 0, tokens: [{ t: '});', c: 'rgba(255,255,255,0.4)' }] },
+  { indent: 0, tokens: [{ t: '});', c: 'rgba(255,255,255,0.7)' }] },
   { indent: 0, tokens: [] },
   { indent: 0, tokens: [{ t: '// ', c: 'rgba(255,255,255,0.2)' }, { t: '✓ Zero bugs in production', c: 'rgba(255,255,255,0.25)' }] },
   { indent: 0, tokens: [{ t: '// ', c: 'rgba(255,255,255,0.2)' }, { t: '✓ On time, on budget', c: 'rgba(255,255,255,0.25)' }] },
@@ -81,7 +81,7 @@ export default function Hero() {
           </h1>
 
           {/* Sub */}
-          <p className="h-p" style={{ fontSize: 'clamp(1rem, 1.6vw, 1.15rem)', color: 'rgba(255,255,255,0.45)', maxWidth: 480, lineHeight: 1.8, margin: '0 0 52px' }}>
+          <p className="h-p" style={{ fontSize: 'clamp(1rem, 1.6vw, 1.15rem)', color: 'rgba(255,255,255,0.75)', maxWidth: 480, lineHeight: 1.8, margin: '0 0 52px' }}>
             Mapletech Labs engineers world-class digital products for companies ready to lead their industry — on time, on budget, every time.
           </p>
 

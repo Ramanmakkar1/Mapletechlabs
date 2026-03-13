@@ -77,8 +77,8 @@ export default function ContactPage() {
   const handleSubmit = (e: React.SyntheticEvent<HTMLFormElement>) => { e.preventDefault(); setSubmitted(true); };
 
   const inp: React.CSSProperties = { width: '100%', padding: '15px 20px', fontSize: 15, fontFamily: 'inherit', background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.09)', borderRadius: 14, color: '#fff', outline: 'none', transition: 'border 0.25s, box-shadow 0.25s' };
-  const sel: React.CSSProperties = { ...inp, appearance: 'none' as const, backgroundImage: `url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='rgba(255,255,255,0.35)' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 18px center' };
-  const lbl: React.CSSProperties = { display: 'block', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' as const, color: 'rgba(255,255,255,0.35)', marginBottom: 8 };
+  const sel: React.CSSProperties = { ...inp, appearance: 'none' as const, backgroundImage: `url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='rgba(255,255,255,0.75)' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 18px center' };
+  const lbl: React.CSSProperties = { display: 'block', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase' as const, color: 'rgba(255,255,255,0.75)', marginBottom: 8 };
   const fi = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => { e.currentTarget.style.borderColor = 'rgba(180,253,131,0.5)'; e.currentTarget.style.boxShadow = '0 0 0 3px rgba(180,253,131,0.08)'; };
   const fo = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.09)'; e.currentTarget.style.boxShadow = 'none'; };
 
@@ -108,7 +108,7 @@ export default function ContactPage() {
             Let&apos;s Build Something<br /><span style={{ color: '#b4fd83' }}>Extraordinary.</span>
           </h1>
 
-          <p className="reveal reveal-d2" style={{ fontSize: 'clamp(1rem,1.8vw,1.2rem)', color: 'rgba(255,255,255,0.4)', maxWidth: 540, lineHeight: 1.75, margin: 0 }}>
+          <p className="reveal reveal-d2" style={{ fontSize: 'clamp(1rem,1.8vw,1.2rem)', color: 'rgba(255,255,255,0.7)', maxWidth: 540, lineHeight: 1.75, margin: 0 }}>
             Whether you&apos;re launching an MVP, scaling an enterprise platform, or exploring a strategic partnership — we&apos;re ready to move fast.
           </p>
 
@@ -131,7 +131,7 @@ export default function ContactPage() {
             {TRUST.map(t => (
               <div key={t.label} style={{ display: 'flex', alignItems: 'center', gap: 9 }}>
                 <span style={{ fontSize: 14 }}>{t.icon}</span>
-                <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)', fontWeight: 500, whiteSpace: 'nowrap' as const }}>{t.label}</span>
+                <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.7)', fontWeight: 500, whiteSpace: 'nowrap' as const }}>{t.label}</span>
               </div>
             ))}
           </div>
@@ -183,7 +183,7 @@ export default function ContactPage() {
               <h2 style={{ fontSize: 'clamp(2rem,3.5vw,3.2rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.1, marginBottom: 20 }}>
                 Tell Us About<br /><span style={{ color: 'rgba(255,255,255,0.2)' }}>Your Project.</span>
               </h2>
-              <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.4)', lineHeight: 1.75, marginBottom: 48, maxWidth: 380 }}>
+              <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)', lineHeight: 1.75, marginBottom: 48, maxWidth: 380 }}>
                 A senior engineer will respond within 4 business hours with a tailored plan.
               </p>
 
@@ -211,7 +211,7 @@ export default function ContactPage() {
               {/* NDA note */}
               <div style={{ padding: '20px 22px', background: 'rgba(180,253,131,0.04)', border: '1px solid rgba(180,253,131,0.1)', borderRadius: 16, display: 'flex', alignItems: 'flex-start', gap: 14 }}>
                 <span style={{ fontSize: 20, flexShrink: 0, marginTop: 2 }}>🔒</span>
-                <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)', lineHeight: 1.65 }}>All enquiries are protected by NDA. Your ideas stay confidential from the very first conversation.</span>
+                <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.7)', lineHeight: 1.65 }}>All enquiries are protected by NDA. Your ideas stay confidential from the very first conversation.</span>
               </div>
             </div>
 
@@ -223,7 +223,7 @@ export default function ContactPage() {
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#b4fd83" strokeWidth="2"><path d="M20 6L9 17l-5-5" /></svg>
                   </div>
                   <h3 style={{ fontSize: 28, fontWeight: 600, color: '#fff', letterSpacing: '-0.03em', marginBottom: 12 }}>We&apos;ve Got It!</h3>
-                  <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.4)', lineHeight: 1.7, maxWidth: 360, margin: '0 auto 32px' }}>
+                  <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, maxWidth: 360, margin: '0 auto 32px' }}>
                     A senior engineer will reach out within 4 business hours. Check your inbox — we&apos;re already on it.
                   </p>
                   <button onClick={() => setSubmitted(false)} style={{ background: 'none', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 100, padding: '12px 28px', color: 'rgba(255,255,255,0.5)', fontSize: 13, cursor: 'pointer', fontFamily: 'inherit', transition: '0.2s' }}>
@@ -320,7 +320,7 @@ export default function ContactPage() {
                   <span style={{ fontSize: 18, fontWeight: 600, color: '#fff', letterSpacing: '-0.02em' }}>{o.city}</span>
                   {o.hq && <span style={{ fontSize: 9, fontWeight: 700, color: '#b4fd83', background: 'rgba(180,253,131,0.1)', padding: '3px 8px', borderRadius: 100, letterSpacing: '0.08em' }}>HQ</span>}
                 </div>
-                <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.35)', lineHeight: 1.6, margin: '0 0 12px' }}>{o.address}</p>
+                <p style={{ fontSize: 13, color: 'rgba(255,255,255,0.75)', lineHeight: 1.6, margin: '0 0 12px' }}>{o.address}</p>
                 <div style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.2)', letterSpacing: '0.1em', textTransform: 'uppercase' as const }}>{o.tz}</div>
               </div>
             ))}
@@ -346,7 +346,7 @@ export default function ContactPage() {
                 <button onClick={() => setOpenFaq(openFaq === i ? null : i)} style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '24px 28px', background: 'none', border: 'none', cursor: 'pointer', fontFamily: 'inherit' }}>
                   <span style={{ fontSize: 16, fontWeight: 500, color: '#fff', textAlign: 'left', letterSpacing: '-0.01em' }}>{faq.q}</span>
                   <div style={{ width: 30, height: 30, borderRadius: '50%', background: 'rgba(255,255,255,0.05)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, transition: 'transform 0.3s', transform: openFaq === i ? 'rotate(45deg)' : 'none' }}>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke={openFaq === i ? '#b4fd83' : 'rgba(255,255,255,0.4)'} strokeWidth="2"><path d="M12 5v14M5 12h14" /></svg>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke={openFaq === i ? '#b4fd83' : 'rgba(255,255,255,0.7)'} strokeWidth="2"><path d="M12 5v14M5 12h14" /></svg>
                   </div>
                 </button>
                 {openFaq === i && (

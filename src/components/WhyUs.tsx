@@ -95,7 +95,7 @@ export default function WhyUs() {
             Built Different.<br />
             <span style={{ color: 'rgba(255,255,255,0.2)' }}>By Design.</span>
           </h2>
-          <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.4)', maxWidth: 560, margin: '0 auto', lineHeight: 1.7 }}>
+          <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.7)', maxWidth: 560, margin: '0 auto', lineHeight: 1.7 }}>
             We're not a typical agency. Here's exactly what makes us different — and why our clients keep coming back.
           </p>
         </div>
@@ -151,7 +151,7 @@ export default function WhyUs() {
               {/* Text */}
               <div>
                 <h3 style={{ fontSize: 18, fontWeight: 600, color: '#fff', marginBottom: 10, letterSpacing: '-0.02em' }}>{r.title}</h3>
-                <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.4)', lineHeight: 1.7, margin: 0 }}>{r.desc}</p>
+                <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, margin: 0 }}>{r.desc}</p>
               </div>
             </div>
           ))}

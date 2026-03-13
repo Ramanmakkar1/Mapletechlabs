@@ -89,7 +89,7 @@ export default function ProcessSection() {
               <span style={{ color: 'rgba(255,255,255,0.2)' }}>In 5 Proven Steps.</span>
             </h2>
           </div>
-          <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.4)', maxWidth: 360, lineHeight: 1.7, margin: 0 }}>
+          <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.7)', maxWidth: 360, lineHeight: 1.7, margin: 0 }}>
             A battle-tested process refined across 500+ projects — giving you full visibility and zero surprises.
           </p>
         </div>
@@ -154,7 +154,7 @@ export default function ProcessSection() {
                 {/* Title + Desc */}
                 <div>
                   <h3 style={{ fontSize: 22, fontWeight: 600, color: '#fff', marginBottom: 10, letterSpacing: '-0.02em' }}>{step.title}</h3>
-                  <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.4)', lineHeight: 1.7, margin: 0 }}>{step.desc}</p>
+                  <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, margin: 0 }}>{step.desc}</p>
                 </div>
 
                 {/* Checklist */}
@@ -171,7 +171,7 @@ export default function ProcessSection() {
 
                 {/* Duration badge */}
                 <div style={{ display: 'flex', justifyContent: 'flex-end' }} className="process-duration">
-                  <div style={{ padding: '10px 20px', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 100, fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.35)', whiteSpace: 'nowrap' }}>
+                  <div style={{ padding: '10px 20px', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 100, fontSize: 13, fontWeight: 600, color: 'rgba(255,255,255,0.75)', whiteSpace: 'nowrap' }}>
                     ⏱ {step.duration}
                   </div>
                 </div>

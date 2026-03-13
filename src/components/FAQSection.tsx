@@ -32,7 +32,7 @@ export default function FAQSection() {
             <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 20 }}>
               Questions<br /><span style={{ color: 'rgba(255,255,255,0.2)' }}>Answered.</span>
             </h2>
-            <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.4)', lineHeight: 1.7, marginBottom: 40 }}>
+            <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, marginBottom: 40 }}>
               Everything you need to know before starting a project with us.
             </p>
             <Link href="#contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 52, padding: '0 28px', borderRadius: 100, background: '#b4fd83', color: '#000', fontSize: 14, fontWeight: 700, textDecoration: 'none', transition: '0.3s' }}
@@ -58,7 +58,7 @@ export default function FAQSection() {
                   </div>
                 </button>
                 <div style={{ maxHeight: active === i ? 200 : 0, overflow: 'hidden', transition: 'max-height 0.45s cubic-bezier(0.16,1,0.3,1)' }}>
-                  <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.45)', lineHeight: 1.8, paddingBottom: 28, margin: 0 }}>{faq.a}</p>
+                  <p style={{ fontSize: 15, color: 'rgba(255,255,255,0.75)', lineHeight: 1.8, paddingBottom: 28, margin: 0 }}>{faq.a}</p>
                 </div>
               </div>
             ))}

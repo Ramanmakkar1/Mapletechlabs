@@ -33,7 +33,7 @@ export default function ServicesSection() {
             <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0, maxWidth: 700 }}>
               Everything You Need<br /><span style={{ color: 'rgba(255,255,255,0.2)' }}>to Build & Scale.</span>
             </h2>
-            <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.4)', maxWidth: 360, lineHeight: 1.7, margin: 0 }}>
+            <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.7)', maxWidth: 360, lineHeight: 1.7, margin: 0 }}>
               From idea to launch and beyond — we cover every layer of modern software development.
             </p>
           </div>
@@ -51,10 +51,10 @@ export default function ServicesSection() {
               <div>
                 <span style={{ display: 'inline-block', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#b4fd83', background: 'rgba(180,253,131,0.1)', padding: '6px 14px', borderRadius: 100, marginBottom: 24 }}>{s.tag}</span>
                 <h3 style={{ fontSize: 'clamp(1.6rem, 2.8vw, 2.4rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.03em', marginBottom: 16, lineHeight: 1.15 }}>{s.title}</h3>
-                <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.45)', lineHeight: 1.7, margin: 0, maxWidth: 440 }}>{s.desc}</p>
+                <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.75)', lineHeight: 1.7, margin: 0, maxWidth: 440 }}>{s.desc}</p>
               </div>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, marginTop: 'auto' }}>
-                {s.chips.map(c => <span key={c} style={{ fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.4)', padding: '7px 16px', border: '1px solid rgba(255,255,255,0.09)', borderRadius: 100 }}>{c}</span>)}
+                {s.chips.map(c => <span key={c} style={{ fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.7)', padding: '7px 16px', border: '1px solid rgba(255,255,255,0.09)', borderRadius: 100 }}>{c}</span>)}
               </div>
               {s.href
                 ? <Link href={s.href} style={{ display: 'inline-flex', alignItems: 'center', gap: 8, color: '#b4fd83', fontSize: 13, fontWeight: 700, letterSpacing: '0.06em', textDecoration: 'none' }}>EXPLORE SERVICE <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg></Link>
@@ -76,7 +76,7 @@ export default function ServicesSection() {
               <span style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#b4fd83' }}>{s.tag}</span>
               <div>
                 <h3 style={{ fontSize: 18, fontWeight: 600, color: '#fff', marginBottom: 10, letterSpacing: '-0.02em' }}>{s.title}</h3>
-                <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.4)', lineHeight: 1.7, margin: 0 }}>{s.desc}</p>
+                <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, margin: 0 }}>{s.desc}</p>
               </div>
             </div>
           ))}

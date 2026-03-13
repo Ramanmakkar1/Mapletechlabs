@@ -30,7 +30,7 @@ export default function IndustriesSection() {
             <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4.5rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, margin: 0 }}>
               Domain Experts.<br /><span style={{ color: 'rgba(255,255,255,0.2)' }}>Strategic Partners.</span>
             </h2>
-            <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.4)', lineHeight: 1.7, margin: 0 }}>
+            <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, margin: 0 }}>
               Deep domain knowledge combined with world-class engineering — we build market leaders, not just software.
             </p>
           </div>
@@ -48,7 +48,7 @@ export default function IndustriesSection() {
               </div>
               <div>
                 <h4 style={{ fontSize: 20, fontWeight: 600, color: '#fff', marginBottom: 10, letterSpacing: '-0.02em' }}>{ind.name}</h4>
-                <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.4)', lineHeight: 1.7, margin: 0 }}>{ind.desc}</p>
+                <p style={{ fontSize: 14, color: 'rgba(255,255,255,0.7)', lineHeight: 1.7, margin: 0 }}>{ind.desc}</p>
               </div>
               <div style={{ marginTop: 'auto', display: 'flex', alignItems: 'center', gap: 6, color: 'rgba(255,255,255,0.2)', fontSize: 11, fontWeight: 700, letterSpacing: '0.08em' }}>
                 LEARN MORE

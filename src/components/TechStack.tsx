@@ -31,7 +31,7 @@ export default function TechStack() {
               Built With the Tools<br /><span style={{ color: 'rgba(255,255,255,0.2)' }}>of Tomorrow.</span>
             </h2>
           </div>
-          <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.4)', maxWidth: 360, lineHeight: 1.7, margin: 0 }}>
+          <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.7)', maxWidth: 360, lineHeight: 1.7, margin: 0 }}>
             A curated stack of best-in-class technologies — chosen for reliability, performance, and scalability.
           </p>
         </div>

@@ -13,6 +13,7 @@ const serviceCategories = [
         <rect x="5" y="2" width="14" height="20" rx="2" /><line x1="12" y1="18" x2="12.01" y2="18" />
       </svg>
     ),
+    href: '/services/mobile-app-development',
     links: [
       { label: 'iOS App Development', href: '/services/mobile-app-development' },
       { label: 'Android App Development', href: '/services/mobile-app-development' },
@@ -29,12 +30,13 @@ const serviceCategories = [
         <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
       </svg>
     ),
+    href: '/services/web-development',
     links: [
-      { label: 'Next.js Development', href: '#services' },
-      { label: 'SaaS Platforms', href: '#services' },
-      { label: 'E-Commerce Systems', href: '#services' },
-      { label: 'API & Backend', href: '#services' },
-      { label: 'Enterprise Portals', href: '#services' },
+      { label: 'Next.js Development', href: '/services/web-development' },
+      { label: 'SaaS Platforms', href: '/services/saas-development' },
+      { label: 'E-Commerce Systems', href: '/services/web-development' },
+      { label: 'API & Backend', href: '/services/web-development' },
+      { label: 'Enterprise Portals', href: '/services/web-development' },
     ],
   },
   {
@@ -44,12 +46,13 @@ const serviceCategories = [
         <path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z" />
       </svg>
     ),
+    href: '/services/ai-ml',
     links: [
-      { label: 'LLM Integration', href: '#services' },
-      { label: 'AI Automation', href: '#services' },
-      { label: 'Computer Vision', href: '#services' },
-      { label: 'Predictive Analytics', href: '#services' },
-      { label: 'AI Chatbots', href: '#services' },
+      { label: 'LLM Integration', href: '/services/ai-ml' },
+      { label: 'AI Automation', href: '/services/ai-ml' },
+      { label: 'Computer Vision', href: '/services/ai-ml' },
+      { label: 'Predictive Analytics', href: '/services/ai-ml' },
+      { label: 'AI Chatbots', href: '/services/ai-ml' },
     ],
   },
   {
@@ -60,12 +63,13 @@ const serviceCategories = [
         <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
       </svg>
     ),
+    href: '/services/blockchain-web3',
     links: [
-      { label: 'Smart Contracts', href: '#services' },
-      { label: 'DeFi Protocols', href: '#services' },
-      { label: 'NFT Platforms', href: '#services' },
-      { label: 'Crypto Wallets', href: '#services' },
-      { label: 'Web3 dApps', href: '#services' },
+      { label: 'Smart Contracts', href: '/services/blockchain-web3' },
+      { label: 'DeFi Protocols', href: '/services/blockchain-web3' },
+      { label: 'NFT Platforms', href: '/services/blockchain-web3' },
+      { label: 'Crypto Wallets', href: '/services/blockchain-web3' },
+      { label: 'Web3 dApps', href: '/services/blockchain-web3' },
     ],
   },
   {
@@ -75,12 +79,13 @@ const serviceCategories = [
         <path d="M12 20h9" /><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
       </svg>
     ),
+    href: '/services/product-design',
     links: [
-      { label: 'UI/UX Strategy', href: '#services' },
-      { label: 'Wireframing', href: '#services' },
-      { label: 'Prototyping', href: '#services' },
-      { label: 'Design Systems', href: '#services' },
-      { label: 'Brand Identity', href: '#services' },
+      { label: 'UI/UX Strategy', href: '/services/product-design' },
+      { label: 'Wireframing', href: '/services/product-design' },
+      { label: 'Prototyping', href: '/services/product-design' },
+      { label: 'Design Systems', href: '/services/product-design' },
+      { label: 'Brand Identity', href: '/services/branding' },
     ],
   },
   {
@@ -90,33 +95,130 @@ const serviceCategories = [
         <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
       </svg>
     ),
+    href: '/services/cloud-devops',
     links: [
-      { label: 'AWS Architecture', href: '#services' },
-      { label: 'Kubernetes & Docker', href: '#services' },
-      { label: 'CI/CD Pipelines', href: '#services' },
-      { label: 'Infrastructure as Code', href: '#services' },
-      { label: 'Performance & Scaling', href: '#services' },
+      { label: 'AWS Architecture', href: '/services/cloud-devops' },
+      { label: 'Kubernetes & Docker', href: '/services/cloud-devops' },
+      { label: 'CI/CD Pipelines', href: '/services/cloud-devops' },
+      { label: 'Infrastructure as Code', href: '/services/cloud-devops' },
+      { label: 'Performance & Scaling', href: '/services/cloud-devops' },
+    ],
+  },
+  {
+    title: 'AR & VR Development',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z" /><circle cx="12" cy="12" r="3" />
+      </svg>
+    ),
+    href: '/services/ar-vr',
+    links: [
+      { label: 'Mobile AR (ARKit/ARCore)', href: '/services/ar-vr' },
+      { label: 'VR Applications', href: '/services/ar-vr' },
+      { label: 'WebXR Experiences', href: '/services/ar-vr' },
+      { label: 'Apple Vision Pro', href: '/services/ar-vr' },
+      { label: 'Industrial AR', href: '/services/ar-vr' },
+    ],
+  },
+  {
+    title: 'Game Development',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="6" width="20" height="12" rx="2" /><path d="M12 12h.01M7 12h.01" /><path d="M17 10v4" /><path d="M15 12h4" />
+      </svg>
+    ),
+    href: '/services/game-development',
+    links: [
+      { label: 'Mobile Games (iOS/Android)', href: '/services/game-development' },
+      { label: 'Unity Development', href: '/services/game-development' },
+      { label: 'Unreal Engine', href: '/services/game-development' },
+      { label: 'Hyper-Casual Games', href: '/services/game-development' },
+      { label: 'Multiplayer & LiveOps', href: '/services/game-development' },
+    ],
+  },
+  {
+    title: 'Digital Marketing',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+      </svg>
+    ),
+    href: '/services/digital-marketing',
+    links: [
+      { label: 'SEO Services', href: '/services/digital-marketing' },
+      { label: 'Google Ads (PPC)', href: '/services/digital-marketing' },
+      { label: 'Social Media Marketing', href: '/services/digital-marketing' },
+      { label: 'Content Marketing', href: '/services/digital-marketing' },
+      { label: 'Performance Analytics', href: '/services/digital-marketing' },
+    ],
+  },
+  {
+    title: 'Branding & Identity',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="12" r="10" /><path d="M8 14s1.5 2 4 2 4-2 4-2" /><line x1="9" y1="9" x2="9.01" y2="9" /><line x1="15" y1="9" x2="15.01" y2="9" />
+      </svg>
+    ),
+    href: '/services/branding',
+    links: [
+      { label: 'Brand Strategy', href: '/services/branding' },
+      { label: 'Logo & Visual Identity', href: '/services/branding' },
+      { label: 'Brand Guidelines', href: '/services/branding' },
+      { label: 'Rebranding', href: '/services/branding' },
+      { label: 'Motion & Video Branding', href: '/services/branding' },
+    ],
+  },
+  {
+    title: 'WordPress & CMS',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M4 4h16v16H4z" /><path d="M4 9h16M9 4v16" />
+      </svg>
+    ),
+    href: '/services/wordpress-cms',
+    links: [
+      { label: 'Custom WordPress Themes', href: '/services/wordpress-cms' },
+      { label: 'WooCommerce Stores', href: '/services/wordpress-cms' },
+      { label: 'Headless WordPress', href: '/services/wordpress-cms' },
+      { label: 'Strapi / Sanity CMS', href: '/services/wordpress-cms' },
+      { label: 'Site Speed Optimisation', href: '/services/wordpress-cms' },
+    ],
+  },
+  {
+    title: 'SaaS Development',
+    icon: (
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="2" y="3" width="20" height="14" rx="2" /><path d="M8 21h8M12 17v4" />
+      </svg>
+    ),
+    href: '/services/saas-development',
+    links: [
+      { label: 'SaaS MVP Development', href: '/services/saas-development' },
+      { label: 'Multi-Tenant Architecture', href: '/services/saas-development' },
+      { label: 'Billing & Subscriptions', href: '/services/saas-development' },
+      { label: 'Auth & SSO', href: '/services/saas-development' },
+      { label: 'Analytics & Dashboards', href: '/services/saas-development' },
     ],
   },
 ];
 
 const industryLinks = [
-  { label: 'FinTech & Banking', href: '#industries' },
-  { label: 'Healthcare & MedTech', href: '#industries' },
-  { label: 'E-Commerce & Retail', href: '#industries' },
-  { label: 'Logistics & Supply Chain', href: '#industries' },
-  { label: 'Education & EdTech', href: '#industries' },
-  { label: 'Enterprise & SaaS', href: '#industries' },
+  { label: 'FinTech & Banking', href: '/industries/fintech' },
+  { label: 'Healthcare & MedTech', href: '/industries/healthcare' },
+  { label: 'E-Commerce & Retail', href: '/industries/ecommerce' },
+  { label: 'Logistics & Supply Chain', href: '/industries/logistics' },
+  { label: 'Education & EdTech', href: '/industries/edtech' },
+  { label: 'Enterprise & SaaS', href: '/industries/enterprise' },
   { label: 'Real Estate & PropTech', href: '#industries' },
-  { label: 'Gaming & Entertainment', href: '#industries' },
+  { label: 'Gaming & Entertainment', href: '/services/game-development' },
 ];
 
 const companyLinks = [
-  { label: 'About Us', href: '#about' },
+  { label: 'About Us', href: '/about' },
   { label: 'Case Studies', href: '#portfolio' },
-  { label: 'R&D Labs', href: '#labs' },
+  { label: 'Blog & Insights', href: '/blog' },
   { label: 'Awards & Recognition', href: '#awards' },
-  { label: 'Careers', href: '#contact' },
+  { label: 'Careers', href: '/contact' },
 ];
 
 // ── Component ───────────────────────────────────────────────────────
@@ -287,8 +389,8 @@ export default function Navbar() {
               </Link>
             </div>
 
-            {/* 6-column service grid */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: 8, marginBottom: 36 }}>
+            {/* 4-column service grid */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 8, marginBottom: 36 }}>
               {serviceCategories.map((cat) => (
                 <div key={cat.title} style={{ padding: '20px 18px', borderRadius: 16, border: '1px solid rgba(255,255,255,0.06)', background: 'rgba(255,255,255,0.02)', transition: '0.3s' }}
                   onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(180,253,131,0.2)'; e.currentTarget.style.background = 'rgba(180,253,131,0.03)'; }}
@@ -306,9 +408,9 @@ export default function Navbar() {
                   <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
                     {cat.links.map(link => (
                       <Link key={link.label} href={link.href} onClick={() => setActiveMenu(null)}
-                        style={{ fontSize: 12, color: 'rgba(255,255,255,0.4)', textDecoration: 'none', padding: '5px 0', transition: '0.15s', display: 'flex', alignItems: 'center', gap: 6 }}
+                        style={{ fontSize: 12, color: 'rgba(255,255,255,0.7)', textDecoration: 'none', padding: '5px 0', transition: '0.15s', display: 'flex', alignItems: 'center', gap: 6 }}
                         onMouseEnter={e => { e.currentTarget.style.color = '#b4fd83'; }}
-                        onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.4)'; }}
+                        onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.7)'; }}
                       >
                         <span style={{ width: 3, height: 3, borderRadius: '50%', background: 'rgba(180,253,131,0.4)', flexShrink: 0, display: 'inline-block' }} />
                         {link.label}
@@ -370,7 +472,7 @@ export default function Navbar() {
                 <div style={{ position: 'absolute', top: -20, right: -20, width: 120, height: 120, background: 'radial-gradient(circle, rgba(180,253,131,0.15) 0%, transparent 70%)', filter: 'blur(20px)' }} />
                 <div style={{ fontSize: 10, fontWeight: 800, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#b4fd83', marginBottom: 10 }}>Featured Work</div>
                 <div style={{ fontSize: 18, fontWeight: 600, color: '#fff', letterSpacing: '-0.03em', marginBottom: 8 }}>AI Trading Engine</div>
-                <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)', lineHeight: 1.6, marginBottom: 20 }}>Processing 2M+ transactions daily with real-time ML sentiment analysis for FinanceHub.</div>
+                <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.7)', lineHeight: 1.6, marginBottom: 20 }}>Processing 2M+ transactions daily with real-time ML sentiment analysis for FinanceHub.</div>
                 <Link href="#portfolio" onClick={() => setActiveMenu(null)} style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontSize: 12, fontWeight: 700, color: '#b4fd83', textDecoration: 'none' }}
                   onMouseEnter={e => { e.currentTarget.style.gap = '12px'; }}
                   onMouseLeave={e => { e.currentTarget.style.gap = '8px'; }}
@@ -422,7 +524,7 @@ export default function Navbar() {
                   <span style={{ fontSize: 12, fontWeight: 700, color: '#b4fd83', letterSpacing: '0.08em', textTransform: 'uppercase' }}>Available for New Projects</span>
                 </div>
                 <div style={{ fontSize: 16, fontWeight: 600, color: '#fff', letterSpacing: '-0.02em' }}>Ready to start your project?</div>
-                <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.4)', lineHeight: 1.6 }}>Get a free consultation and fixed-price proposal within 24 hours.</div>
+                <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>Get a free consultation and fixed-price proposal within 24 hours.</div>
                 <Link href="#contact" onClick={() => setActiveMenu(null)} style={{ display: 'inline-flex', alignItems: 'center', gap: 8, height: 40, padding: '0 20px', borderRadius: 100, background: 'linear-gradient(135deg, #b4fd83, #7deb3e)', color: '#000', fontSize: 13, fontWeight: 700, textDecoration: 'none', width: 'fit-content' }}>
                   Book Free Call
                   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>

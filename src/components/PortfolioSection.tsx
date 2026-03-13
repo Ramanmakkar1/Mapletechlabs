@@ -61,7 +61,7 @@ export default function PortfolioSection() {
           </div>
           <div className="portfolio-tabs">
             {projects.map((pr, i) => (
-              <button key={pr.category} onClick={() => setActive(i)} style={{ padding: '12px 28px', borderRadius: 100, cursor: 'pointer', fontSize: 13, fontWeight: 600, border: active === i ? '1px solid rgba(180,253,131,0.4)' : '1px solid rgba(255,255,255,0.1)', background: active === i ? 'rgba(180,253,131,0.1)' : 'transparent', color: active === i ? '#b4fd83' : 'rgba(255,255,255,0.4)', transition: '0.3s', fontFamily: 'inherit' }}>{pr.category}</button>
+              <button key={pr.category} onClick={() => setActive(i)} style={{ padding: '12px 28px', borderRadius: 100, cursor: 'pointer', fontSize: 13, fontWeight: 600, border: active === i ? '1px solid rgba(180,253,131,0.4)' : '1px solid rgba(255,255,255,0.1)', background: active === i ? 'rgba(180,253,131,0.1)' : 'transparent', color: active === i ? '#b4fd83' : 'rgba(255,255,255,0.7)', transition: '0.3s', fontFamily: 'inherit' }}>{pr.category}</button>
             ))}
           </div>
         </div>
@@ -71,7 +71,7 @@ export default function PortfolioSection() {
             <div>
               <div style={{ fontSize: 11, fontWeight: 700, color: 'rgba(255,255,255,0.3)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: 20 }}>{p.client}</div>
               <h3 style={{ fontSize: 'clamp(2rem, 4vw, 3.2rem)', fontWeight: 500, color: '#fff', letterSpacing: '-0.04em', lineHeight: 1.05, marginBottom: 20 }}>{p.title}</h3>
-              <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.45)', lineHeight: 1.7, maxWidth: 480 }}>{p.desc}</p>
+              <p style={{ fontSize: 17, color: 'rgba(255,255,255,0.75)', lineHeight: 1.7, maxWidth: 480 }}>{p.desc}</p>
             </div>
             <div>
               <div className="portfolio-content-row" style={{ marginBottom: 40 }}>
@@ -81,7 +81,7 @@ export default function PortfolioSection() {
                 </div>
                 <div style={{ width: 1, background: 'rgba(255,255,255,0.07)', alignSelf: 'stretch' }} />
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, alignContent: 'center' }}>
-                  {p.tags.map(t => <span key={t} style={{ fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.45)', padding: '8px 18px', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 100 }}>{t}</span>)}
+                  {p.tags.map(t => <span key={t} style={{ fontSize: 12, fontWeight: 600, color: 'rgba(255,255,255,0.75)', padding: '8px 18px', border: '1px solid rgba(255,255,255,0.1)', borderRadius: 100 }}>{t}</span>)}
                 </div>
               </div>
               <a href="/case-studies" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 52, padding: '0 28px', borderRadius: 100, background: '#b4fd83', color: '#000', fontSize: 14, fontWeight: 700, textDecoration: 'none', cursor: 'pointer', fontFamily: 'inherit' }}>

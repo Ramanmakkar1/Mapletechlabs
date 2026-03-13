@@ -62,7 +62,7 @@ export default function ComparisonTable() {
               { label: 'Freelancer', highlight: false },
             ].map(col => (
               <div key={col.label} style={{ padding: '28px 32px', textAlign: 'center', borderLeft: '1px solid rgba(255,255,255,0.06)', background: col.highlight ? 'rgba(180,253,131,0.05)' : 'transparent' }}>
-                <div style={{ fontSize: 14, fontWeight: 700, color: col.highlight ? '#b4fd83' : 'rgba(255,255,255,0.45)', letterSpacing: '-0.01em' }}>{col.label}</div>
+                <div style={{ fontSize: 14, fontWeight: 700, color: col.highlight ? '#b4fd83' : 'rgba(255,255,255,0.75)', letterSpacing: '-0.01em' }}>{col.label}</div>
                 {col.highlight && <div style={{ width: 32, height: 2, background: '#b4fd83', borderRadius: 1, margin: '8px auto 0' }} />}
               </div>
             ))}
@@ -98,7 +98,7 @@ export default function ComparisonTable() {
 
         {/* CTA below table */}
         <div className="reveal reveal-d2" style={{ textAlign: 'center', marginTop: 60 }}>
-          <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.4)', marginBottom: 28 }}>Ready to work with a team that checks every box?</p>
+          <p style={{ fontSize: 16, color: 'rgba(255,255,255,0.7)', marginBottom: 28 }}>Ready to work with a team that checks every box?</p>
           <a href="#contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 56, padding: '0 36px', borderRadius: 100, background: '#b4fd83', color: '#000', fontSize: 15, fontWeight: 700, textDecoration: 'none', transition: '0.3s' }}
             onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 16px 40px rgba(180,253,131,0.4)'; }}
             onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}

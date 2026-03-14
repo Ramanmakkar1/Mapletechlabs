@@ -18,43 +18,43 @@ function useReveal() {
 }
 
 const stats = [
-  { value: '80+', label: 'SaaS Products Built' },
-  { value: '$2B+', label: 'Client ARR Managed' },
-  { value: '99.99%', label: 'Uptime SLA' },
-  { value: '4.9★', label: 'Client Rating' },
+  { value: '50+', label: 'SaaS Products Shipped' },
+  { value: '$200M+', label: 'ARR Generated' },
+  { value: '99.99%', label: 'Uptime' },
+  { value: '8-Week', label: 'MVP Timeline' },
 ];
 
 const services = [
-  { icon: '🏗️', title: 'SaaS MVP Development', desc: 'From zero to a production-ready MVP in 8–12 weeks. We architect for scale from day one so you never need to rebuild when traction hits.' },
-  { icon: '📊', title: 'Multi-Tenant Architecture', desc: 'Data isolation, tenant provisioning, custom domains and per-tenant configuration — built on proven patterns that scale to thousands of accounts.' },
-  { icon: '💳', title: 'Billing & Subscriptions', desc: 'Stripe-powered billing, usage-based pricing, trial flows, dunning management and revenue analytics integrated directly into your product.' },
-  { icon: '🔐', title: 'Auth & Permissions', desc: 'SSO (SAML, OAuth), RBAC, team management, audit logs and enterprise security controls that close enterprise deals faster.' },
-  { icon: '📈', title: 'Analytics & Dashboards', desc: 'In-product analytics, usage tracking, customer health scores and reporting dashboards that drive expansion revenue and reduce churn.' },
-  { icon: '🔌', title: 'Integrations & APIs', desc: 'REST and GraphQL APIs, webhook infrastructure, native integrations with Salesforce, HubSpot, Slack and your customers\' existing stack.' },
+  { icon: '🏗️', title: 'SaaS Architecture', desc: 'Multi-tenant data isolation, org-level customisation and the infrastructure patterns that support 10 to 10 million users without re-architecting.' },
+  { icon: '💳', title: 'Subscription Billing', desc: 'Stripe integration with flat-rate, per-seat, metered and usage-based billing — trial management, proration and dunning all handled.' },
+  { icon: '🔐', title: 'Auth & Multi-tenancy', desc: 'SSO (SAML/OIDC), role-based access control, organisation management and audit logs — enterprise-ready from day one.' },
+  { icon: '📊', title: 'Analytics Dashboards', desc: 'Usage analytics, revenue metrics, churn indicators and feature adoption dashboards that give your team and customers actionable data.' },
+  { icon: '🔌', title: 'API Platform', desc: 'RESTful and GraphQL APIs with versioning, rate limiting, webhooks, API keys and auto-generated SDK and documentation.' },
+  { icon: '⚡', title: 'DevOps & Scaling', desc: 'CI/CD pipelines, containerised deployments, auto-scaling infrastructure, zero-downtime migrations and 24/7 monitoring.' },
 ];
 
 const steps = [
-  { num: '01', title: 'Product Architecture', desc: 'We define your data model, tenant isolation strategy, feature set and infrastructure before writing a line of code. Architecture decisions made early save months later.' },
-  { num: '02', title: 'MVP Build', desc: 'Core product, auth, billing, and onboarding flow — production-ready and ready for real users. No prototypes. No throwaway code.' },
-  { num: '03', title: 'Growth Features', desc: 'After launch we build the features that drive expansion: analytics, integrations, enterprise SSO, usage-based billing and self-serve onboarding optimisation.' },
-  { num: '04', title: 'Scale & Optimise', desc: 'Performance engineering, infrastructure autoscaling, database optimisation and cost reduction as you grow from hundreds to hundreds of thousands of users.' },
+  { num: '01', title: 'Discovery', desc: 'We map your target customer, core use case, pricing model and technical constraints — producing a product spec and architecture ADR before writing any code.' },
+  { num: '02', title: 'Architecture', desc: 'Database schema, API contract, auth model, billing flows and infrastructure design reviewed and signed off before MVP development begins.' },
+  { num: '03', title: 'MVP', desc: 'Core feature set built in 6–8 weeks, deployed to production with real customers — billing live, auth working, and the critical loop your first cohort needs to see value.' },
+  { num: '04', title: 'Scale', desc: 'Post-PMF feature expansion, performance optimisation, enterprise tier additions and the infrastructure hardening needed to support aggressive growth.' },
 ];
 
 const results = [
-  { value: '8wk', label: 'MVP to Market', sub: 'average time from kickoff to launch' },
-  { value: '40%', label: 'Lower CAC', sub: 'via self-serve onboarding optimisation' },
-  { value: '3x', label: 'Expansion Revenue', sub: 'through usage-based billing models' },
+  { value: '8wk', label: 'MVP to Production', sub: 'median time from kickoff to launch' },
+  { value: '$200M+', label: 'ARR Enabled', sub: 'across portfolio of SaaS products' },
+  { value: '99.99%', label: 'Uptime', sub: 'SLA across production SaaS platforms' },
 ];
 
 const faqs = [
-  { q: 'How long does it take to build a SaaS MVP?', a: 'We target 8–12 weeks for a production-ready MVP with core product features, auth, billing and onboarding. Timeline depends on feature complexity, integrations required and design work needed. We provide a detailed breakdown after a discovery call.' },
-  { q: 'What tech stack do you use for SaaS products?', a: 'Our default stack is Next.js (frontend), Node.js or Go (backend), PostgreSQL (database), Redis (caching/queues), Stripe (billing) and AWS or Vercel (infrastructure). We adapt to your existing tech choices or team preferences.' },
-  { q: 'How do you handle multi-tenancy?', a: 'We implement the right isolation model for your use case — shared schema with row-level security (most common), separate schemas per tenant, or separate databases for high-compliance industries. We help you choose based on your compliance requirements and cost targets.' },
-  { q: 'Can you take over an existing SaaS codebase?', a: 'Yes. We have a structured onboarding process for existing codebases: technical audit, documentation, incremental refactoring and test coverage — without stopping feature development. We\'ve taken over codebases at seed stage through Series B.' },
-  { q: 'Do you offer ongoing product development after launch?', a: 'Yes. Most clients continue with a dedicated team on a monthly retainer after launch. We embed with your business — weekly sprints, product planning, architecture decisions and on-call support. You get a senior team without the senior hiring cost.' },
+  { q: 'What tech stack do you use for SaaS products?', a: 'Our default stack is Next.js (frontend and API routes), PostgreSQL (primary database), Redis (caching and queues), Stripe (billing), Auth.js or Clerk (authentication) and AWS or Vercel (infrastructure). We adapt based on your requirements and existing technology.' },
+  { q: 'Can you build an MVP in 8 weeks?', a: 'Yes, for a well-scoped core feature set. The 8-week MVP timeline applies when discovery is complete, design is approved and the scope is disciplined. We will tell you upfront if your requirements require more time — we do not over-promise.' },
+  { q: 'Do you handle multi-tenancy from day one, or can I add it later?', a: 'Multi-tenancy is significantly cheaper to build correctly from the start than to retrofit. We architect data isolation, org management and tenant-scoped permissions at the schema level from day one, which protects you as you scale into enterprise customers.' },
+  { q: 'Will you help us after launch, or is it a handoff?', a: 'We offer ongoing engineering partnerships — retainer-based or project-by-project. Many clients engage us for 6–18 months post-launch for feature development, infrastructure scaling and technical leadership ahead of fundraising rounds.' },
+  { q: 'How do you approach SaaS pricing and billing architecture?', a: 'We start with your go-to-market model and design the billing architecture to match — free tier, trial-to-paid, per-seat, usage-based or hybrid. We configure Stripe with your exact pricing logic, automate invoicing and build the self-serve upgrade/downgrade flows your customers expect.' },
 ];
 
-export default function SaaSPage() {
+export default function SaaSDevelopmentPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const heroRef = useRef<HTMLElement>(null);
   const s1 = useReveal() as React.RefObject<HTMLElement>;
@@ -94,14 +94,14 @@ export default function SaaSPage() {
               We Build SaaS Products That <span style={{ color: '#b4fd83' }}>Scale.</span>
             </h1>
             <p className="reveal reveal-d2" style={{ fontSize: 17, color: 'rgba(255,255,255,0.65)', lineHeight: 1.75, maxWidth: 520, margin: '0 0 40px' }}>
-              From zero to Series B — multi-tenant SaaS platforms, billing infrastructure and growth-ready architecture built by a team that has done it 80+ times.
+              From zero to Series A — multi-tenant SaaS platforms with billing, auth, analytics and the infrastructure to grow.
             </p>
             <div className="reveal reveal-d3" style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
               <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 56, padding: '0 32px', borderRadius: 100, background: '#b4fd83', color: '#000', fontSize: 14, fontWeight: 700, textDecoration: 'none', transition: '0.3s' }} onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 16px 40px rgba(180,253,131,0.35)'; }} onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
-                Start Your SaaS <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                Get Started <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
               </Link>
               <Link href="/case-studies" style={{ display: 'inline-flex', alignItems: 'center', height: 56, padding: '0 32px', borderRadius: 100, border: '1px solid rgba(255,255,255,0.12)', color: '#fff', fontSize: 14, fontWeight: 500, textDecoration: 'none', transition: '0.3s' }} onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.3)'} onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)'}>
-                See Case Studies
+                See Our Work
               </Link>
             </div>
           </div>
@@ -127,8 +127,8 @@ export default function SaaSPage() {
             <div className="reveal" style={{ marginBottom: 16 }}>
               <span style={{ fontSize: 11, fontWeight: 700, color: '#b4fd83', letterSpacing: '0.12em', textTransform: 'uppercase' }}>What We Build</span>
             </div>
-            <h2 className="reveal reveal-d1" style={{ fontSize: 'clamp(2rem,3.5vw,3rem)', fontWeight: 500, letterSpacing: '-0.03em', margin: '0 0 16px' }}>SaaS Development Services</h2>
-            <p className="reveal reveal-d2" style={{ fontSize: 16, color: 'rgba(255,255,255,0.55)', maxWidth: 520, margin: '0 0 56px', lineHeight: 1.7 }}>Every layer of a production SaaS — from data model to growth features.</p>
+            <h2 className="reveal reveal-d1" style={{ fontSize: 'clamp(2rem,3.5vw,3rem)', fontWeight: 500, letterSpacing: '-0.03em', margin: '0 0 16px' }}>Full-Stack SaaS Engineering</h2>
+            <p className="reveal reveal-d2" style={{ fontSize: 16, color: 'rgba(255,255,255,0.55)', maxWidth: 520, margin: '0 0 56px', lineHeight: 1.7 }}>Every layer of the stack — from database schema to billing flows to the CI/CD pipeline that ships daily.</p>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 20 }}>
               {services.map((svc, i) => (
                 <div key={i} className="reveal" style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: 20, padding: '32px 28px', cursor: 'default', transition: '0.3s', transitionDelay: `${i * 0.07}s` }}
@@ -147,7 +147,7 @@ export default function SaaSPage() {
         <section ref={s3} className="section-padding" style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
           <div className="cb-container">
             <div className="reveal" style={{ marginBottom: 16 }}>
-              <span style={{ fontSize: 11, fontWeight: 700, color: '#b4fd83', letterSpacing: '0.12em', textTransform: 'uppercase' }}>How We Work</span>
+              <span style={{ fontSize: 11, fontWeight: 700, color: '#b4fd83', letterSpacing: '0.12em', textTransform: 'uppercase' }}>How We Build</span>
             </div>
             <h2 className="reveal reveal-d1" style={{ fontSize: 'clamp(2rem,3.5vw,3rem)', fontWeight: 500, letterSpacing: '-0.03em', margin: '0 0 60px' }}>Our SaaS Build Process</h2>
             <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', gap: 0 }}>
@@ -171,7 +171,7 @@ export default function SaaSPage() {
             <div className="reveal" style={{ marginBottom: 16 }}>
               <span style={{ fontSize: 11, fontWeight: 700, color: '#b4fd83', letterSpacing: '0.12em', textTransform: 'uppercase' }}>Results</span>
             </div>
-            <h2 className="reveal reveal-d1" style={{ fontSize: 'clamp(2rem,3.5vw,3rem)', fontWeight: 500, letterSpacing: '-0.03em', margin: '0 0 48px' }}>SaaS That Grows</h2>
+            <h2 className="reveal reveal-d1" style={{ fontSize: 'clamp(2rem,3.5vw,3rem)', fontWeight: 500, letterSpacing: '-0.03em', margin: '0 0 48px' }}>SaaS Built to Last</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 20 }}>
               {results.map((r, i) => (
                 <div key={i} className="reveal" style={{ background: 'rgba(180,253,131,0.04)', border: '1px solid rgba(180,253,131,0.12)', borderRadius: 24, padding: '40px 32px', transitionDelay: `${i * 0.1}s` }}>
@@ -218,18 +218,18 @@ export default function SaaSPage() {
               Ready to Build Your <span style={{ color: '#b4fd83' }}>SaaS?</span>
             </h2>
             <p className="reveal reveal-d2" style={{ fontSize: 17, color: 'rgba(255,255,255,0.55)', maxWidth: 480, margin: '0 auto 40px', lineHeight: 1.75 }}>
-              80+ SaaS products shipped. Let&apos;s build yours.
+              50+ SaaS products shipped. From zero to production in 8 weeks.
             </p>
             <div className="reveal reveal-d3" style={{ display: 'flex', gap: 14, justifyContent: 'center', flexWrap: 'wrap' }}>
               <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 10, height: 56, padding: '0 32px', borderRadius: 100, background: '#b4fd83', color: '#000', fontSize: 14, fontWeight: 700, textDecoration: 'none', transition: '0.3s' }} onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 16px 40px rgba(180,253,131,0.35)'; }} onMouseLeave={e => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
-                Start Your Project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
+                Start Your SaaS Project <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
               </Link>
               <Link href="/case-studies" style={{ display: 'inline-flex', alignItems: 'center', height: 56, padding: '0 32px', borderRadius: 100, border: '1px solid rgba(255,255,255,0.12)', color: '#fff', fontSize: 14, fontWeight: 500, textDecoration: 'none', transition: '0.3s' }} onMouseEnter={e => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.3)'} onMouseLeave={e => e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)'}>
-                See Case Studies
+                View SaaS Portfolio
               </Link>
             </div>
             <div className="reveal reveal-d4" style={{ display: 'flex', gap: 32, justifyContent: 'center', marginTop: 48, flexWrap: 'wrap' }}>
-              {['8-week MVP delivery', 'Built for enterprise scale', 'Ongoing product team available'].map((t, i) => (
+              {['8-week MVP guaranteed', 'Multi-tenant from day one', 'Ongoing engineering support'].map((t, i) => (
                 <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, color: 'rgba(255,255,255,0.45)' }}>
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#b4fd83" strokeWidth="2.5"><path d="M20 6L9 17l-5-5" /></svg>
                   {t}

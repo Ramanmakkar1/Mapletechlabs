@@ -15,11 +15,11 @@ const serviceCategories = [
     ),
     href: '/services/mobile-app-development',
     links: [
-      { label: 'iOS App Development', href: '/services/mobile-app-development' },
-      { label: 'Android App Development', href: '/services/mobile-app-development' },
-      { label: 'Flutter Development', href: '/services/mobile-app-development' },
-      { label: 'React Native Apps', href: '/services/mobile-app-development' },
-      { label: 'Cross-Platform Apps', href: '/services/mobile-app-development' },
+      { label: 'iOS App Development', href: '/services/mobile-app-development/ios-app-development' },
+      { label: 'Android App Development', href: '/services/mobile-app-development/android-app-development' },
+      { label: 'Flutter Development', href: '/services/mobile-app-development/flutter-development' },
+      { label: 'React Native Apps', href: '/services/mobile-app-development/react-native-apps' },
+      { label: 'Cross-Platform Apps', href: '/services/mobile-app-development/cross-platform-apps' },
     ],
   },
   {
@@ -32,11 +32,11 @@ const serviceCategories = [
     ),
     href: '/services/web-development',
     links: [
-      { label: 'Next.js Development', href: '/services/web-development' },
-      { label: 'SaaS Platforms', href: '/services/saas-development' },
-      { label: 'E-Commerce Systems', href: '/services/web-development' },
-      { label: 'API & Backend', href: '/services/web-development' },
-      { label: 'Enterprise Portals', href: '/services/web-development' },
+      { label: 'Next.js Development', href: '/services/web-development/nextjs-development' },
+      { label: 'SaaS Platforms', href: '/services/web-development/saas-platforms' },
+      { label: 'E-Commerce Systems', href: '/services/web-development/ecommerce-systems' },
+      { label: 'API & Backend', href: '/services/web-development/api-backend' },
+      { label: 'Enterprise Portals', href: '/services/web-development/enterprise-portals' },
     ],
   },
   {
@@ -48,11 +48,11 @@ const serviceCategories = [
     ),
     href: '/services/ai-ml',
     links: [
-      { label: 'LLM Integration', href: '/services/ai-ml' },
-      { label: 'AI Automation', href: '/services/ai-ml' },
-      { label: 'Computer Vision', href: '/services/ai-ml' },
-      { label: 'Predictive Analytics', href: '/services/ai-ml' },
-      { label: 'AI Chatbots', href: '/services/ai-ml' },
+      { label: 'LLM Integration', href: '/services/ai-ml/llm-integration' },
+      { label: 'AI Automation', href: '/services/ai-ml/ai-automation' },
+      { label: 'Computer Vision', href: '/services/ai-ml/computer-vision' },
+      { label: 'Predictive Analytics', href: '/services/ai-ml/predictive-analytics' },
+      { label: 'AI Chatbots', href: '/services/ai-ml/ai-chatbots' },
     ],
   },
   {
@@ -65,11 +65,11 @@ const serviceCategories = [
     ),
     href: '/services/blockchain-web3',
     links: [
-      { label: 'Smart Contracts', href: '/services/blockchain-web3' },
-      { label: 'DeFi Protocols', href: '/services/blockchain-web3' },
-      { label: 'NFT Platforms', href: '/services/blockchain-web3' },
-      { label: 'Crypto Wallets', href: '/services/blockchain-web3' },
-      { label: 'Web3 dApps', href: '/services/blockchain-web3' },
+      { label: 'Smart Contracts', href: '/services/blockchain-web3/smart-contracts' },
+      { label: 'DeFi Protocols', href: '/services/blockchain-web3/defi-protocols' },
+      { label: 'NFT Platforms', href: '/services/blockchain-web3/nft-platforms' },
+      { label: 'Crypto Wallets', href: '/services/blockchain-web3/crypto-wallets' },
+      { label: 'Web3 dApps', href: '/services/blockchain-web3/web3-dapps' },
     ],
   },
   {
@@ -81,11 +81,11 @@ const serviceCategories = [
     ),
     href: '/services/product-design',
     links: [
-      { label: 'UI/UX Strategy', href: '/services/product-design' },
-      { label: 'Wireframing', href: '/services/product-design' },
-      { label: 'Prototyping', href: '/services/product-design' },
-      { label: 'Design Systems', href: '/services/product-design' },
-      { label: 'Brand Identity', href: '/services/branding' },
+      { label: 'UI/UX Strategy', href: '/services/product-design/ui-ux-strategy' },
+      { label: 'Wireframing', href: '/services/product-design/wireframing' },
+      { label: 'Prototyping', href: '/services/product-design/prototyping' },
+      { label: 'Design Systems', href: '/services/product-design/design-systems' },
+      { label: 'Brand Identity', href: '/services/product-design/brand-identity' },
     ],
   },
   {
@@ -97,11 +97,11 @@ const serviceCategories = [
     ),
     href: '/services/cloud-devops',
     links: [
-      { label: 'AWS Architecture', href: '/services/cloud-devops' },
-      { label: 'Kubernetes & Docker', href: '/services/cloud-devops' },
-      { label: 'CI/CD Pipelines', href: '/services/cloud-devops' },
-      { label: 'Infrastructure as Code', href: '/services/cloud-devops' },
-      { label: 'Performance & Scaling', href: '/services/cloud-devops' },
+      { label: 'AWS Architecture', href: '/services/cloud-devops/aws-architecture' },
+      { label: 'Kubernetes & Docker', href: '/services/cloud-devops/kubernetes-docker' },
+      { label: 'CI/CD Pipelines', href: '/services/cloud-devops/ci-cd-pipelines' },
+      { label: 'Infrastructure as Code', href: '/services/cloud-devops/infrastructure-as-code' },
+      { label: 'Performance & Scaling', href: '/services/cloud-devops/performance-scaling' },
     ],
   },
   {
@@ -113,11 +113,11 @@ const serviceCategories = [
     ),
     href: '/services/ar-vr',
     links: [
-      { label: 'Mobile AR (ARKit/ARCore)', href: '/services/ar-vr' },
-      { label: 'VR Applications', href: '/services/ar-vr' },
-      { label: 'WebXR Experiences', href: '/services/ar-vr' },
-      { label: 'Apple Vision Pro', href: '/services/ar-vr' },
-      { label: 'Industrial AR', href: '/services/ar-vr' },
+      { label: 'Mobile AR (ARKit/ARCore)', href: '/services/ar-vr/mobile-ar' },
+      { label: 'VR Applications', href: '/services/ar-vr/vr-applications' },
+      { label: 'WebXR Experiences', href: '/services/ar-vr/webxr-experiences' },
+      { label: 'Apple Vision Pro', href: '/services/ar-vr/apple-vision-pro' },
+      { label: 'Industrial AR', href: '/services/ar-vr/industrial-ar' },
     ],
   },
   {
@@ -129,11 +129,11 @@ const serviceCategories = [
     ),
     href: '/services/game-development',
     links: [
-      { label: 'Mobile Games (iOS/Android)', href: '/services/game-development' },
-      { label: 'Unity Development', href: '/services/game-development' },
-      { label: 'Unreal Engine', href: '/services/game-development' },
-      { label: 'Hyper-Casual Games', href: '/services/game-development' },
-      { label: 'Multiplayer & LiveOps', href: '/services/game-development' },
+      { label: 'Mobile Games (iOS/Android)', href: '/services/game-development/mobile-games' },
+      { label: 'Unity Development', href: '/services/game-development/unity-development' },
+      { label: 'Unreal Engine', href: '/services/game-development/unreal-engine' },
+      { label: 'Hyper-Casual Games', href: '/services/game-development/hyper-casual-games' },
+      { label: 'Multiplayer & LiveOps', href: '/services/game-development/multiplayer-liveops' },
     ],
   },
   {
@@ -145,11 +145,11 @@ const serviceCategories = [
     ),
     href: '/services/digital-marketing',
     links: [
-      { label: 'SEO Services', href: '/services/digital-marketing' },
-      { label: 'Google Ads (PPC)', href: '/services/digital-marketing' },
-      { label: 'Social Media Marketing', href: '/services/digital-marketing' },
-      { label: 'Content Marketing', href: '/services/digital-marketing' },
-      { label: 'Performance Analytics', href: '/services/digital-marketing' },
+      { label: 'SEO Services', href: '/services/digital-marketing/seo-services' },
+      { label: 'Google Ads (PPC)', href: '/services/digital-marketing/google-ads-ppc' },
+      { label: 'Social Media Marketing', href: '/services/digital-marketing/social-media-marketing' },
+      { label: 'Content Marketing', href: '/services/digital-marketing/content-marketing' },
+      { label: 'Performance Analytics', href: '/services/digital-marketing/performance-analytics' },
     ],
   },
   {
@@ -161,11 +161,11 @@ const serviceCategories = [
     ),
     href: '/services/branding',
     links: [
-      { label: 'Brand Strategy', href: '/services/branding' },
-      { label: 'Logo & Visual Identity', href: '/services/branding' },
-      { label: 'Brand Guidelines', href: '/services/branding' },
-      { label: 'Rebranding', href: '/services/branding' },
-      { label: 'Motion & Video Branding', href: '/services/branding' },
+      { label: 'Brand Strategy', href: '/services/branding/brand-strategy' },
+      { label: 'Logo & Visual Identity', href: '/services/branding/logo-visual-identity' },
+      { label: 'Brand Guidelines', href: '/services/branding/brand-guidelines' },
+      { label: 'Rebranding', href: '/services/branding/rebranding' },
+      { label: 'Motion & Video Branding', href: '/services/branding/motion-video-branding' },
     ],
   },
   {
@@ -177,11 +177,11 @@ const serviceCategories = [
     ),
     href: '/services/wordpress-cms',
     links: [
-      { label: 'Custom WordPress Themes', href: '/services/wordpress-cms' },
-      { label: 'WooCommerce Stores', href: '/services/wordpress-cms' },
-      { label: 'Headless WordPress', href: '/services/wordpress-cms' },
-      { label: 'Strapi / Sanity CMS', href: '/services/wordpress-cms' },
-      { label: 'Site Speed Optimisation', href: '/services/wordpress-cms' },
+      { label: 'Custom WordPress Themes', href: '/services/wordpress-cms/custom-wordpress-themes' },
+      { label: 'WooCommerce Stores', href: '/services/wordpress-cms/woocommerce-stores' },
+      { label: 'Headless WordPress', href: '/services/wordpress-cms/headless-wordpress' },
+      { label: 'Strapi / Sanity CMS', href: '/services/wordpress-cms/strapi-sanity-cms' },
+      { label: 'Site Speed Optimisation', href: '/services/wordpress-cms/site-speed-optimisation' },
     ],
   },
   {
@@ -193,11 +193,11 @@ const serviceCategories = [
     ),
     href: '/services/saas-development',
     links: [
-      { label: 'SaaS MVP Development', href: '/services/saas-development' },
-      { label: 'Multi-Tenant Architecture', href: '/services/saas-development' },
-      { label: 'Billing & Subscriptions', href: '/services/saas-development' },
-      { label: 'Auth & SSO', href: '/services/saas-development' },
-      { label: 'Analytics & Dashboards', href: '/services/saas-development' },
+      { label: 'SaaS MVP Development', href: '/services/saas-development/saas-mvp-development' },
+      { label: 'Multi-Tenant Architecture', href: '/services/saas-development/multi-tenant-architecture' },
+      { label: 'Billing & Subscriptions', href: '/services/saas-development/billing-subscriptions' },
+      { label: 'Auth & SSO', href: '/services/saas-development/auth-sso' },
+      { label: 'Analytics & Dashboards', href: '/services/saas-development/analytics-dashboards' },
     ],
   },
 ];
@@ -370,9 +370,9 @@ export default function Navbar() {
             pointerEvents: activeMenu === 'services' ? 'auto' : 'none',
           }}
         >
-          <div className="cb-container" style={{ padding: '40px 60px 48px' }}>
+          <div className="cb-container" style={{ padding: '28px 40px 32px' }}>
             {/* Header */}
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 36, paddingBottom: 24, borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 20, paddingBottom: 16, borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
               <div>
                 <div style={{ fontSize: 10, fontWeight: 800, letterSpacing: '0.15em', textTransform: 'uppercase', color: '#b4fd83', marginBottom: 6 }}>What We Build</div>
                 <div style={{ fontSize: 22, fontWeight: 500, color: '#fff', letterSpacing: '-0.03em' }}>End-to-End Engineering Services</div>
@@ -386,30 +386,30 @@ export default function Navbar() {
               </Link>
             </div>
 
-            {/* 4-column service grid */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 8, marginBottom: 36 }}>
+            {/* 6-column service grid — icon + title + compact sub-links */}
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: 6, marginBottom: 20 }}>
               {serviceCategories.map((cat) => (
-                <div key={cat.title} style={{ padding: '20px 18px', borderRadius: 16, border: '1px solid rgba(255,255,255,0.06)', background: 'rgba(255,255,255,0.02)', transition: '0.3s' }}
+                <div key={cat.title} style={{ padding: '14px 14px', borderRadius: 14, border: '1px solid rgba(255,255,255,0.06)', background: 'rgba(255,255,255,0.02)', transition: '0.3s' }}
                   onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(180,253,131,0.2)'; e.currentTarget.style.background = 'rgba(180,253,131,0.03)'; }}
                   onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.06)'; e.currentTarget.style.background = 'rgba(255,255,255,0.02)'; }}
                 >
-                  {/* Category header */}
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
-                    <div style={{ width: 34, height: 34, borderRadius: 10, background: 'rgba(180,253,131,0.1)', border: '1px solid rgba(180,253,131,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#b4fd83', flexShrink: 0 }}>
+                  {/* Category header — whole thing is a link */}
+                  <Link href={cat.href} onClick={() => setActiveMenu(null)} style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 10, textDecoration: 'none' }}>
+                    <div style={{ width: 28, height: 28, borderRadius: 8, background: 'rgba(180,253,131,0.1)', border: '1px solid rgba(180,253,131,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#b4fd83', flexShrink: 0 }}>
                       {cat.icon}
                     </div>
-                    <span style={{ fontSize: 12, fontWeight: 700, color: '#fff', letterSpacing: '-0.01em', lineHeight: 1.3 }}>{cat.title}</span>
-                  </div>
+                    <span style={{ fontSize: 11, fontWeight: 700, color: '#fff', letterSpacing: '-0.01em', lineHeight: 1.25 }}>{cat.title}</span>
+                  </Link>
 
                   {/* Sub-links */}
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
                     {cat.links.map(link => (
                       <Link key={link.label} href={link.href} onClick={() => setActiveMenu(null)}
-                        style={{ fontSize: 12, color: 'rgba(255,255,255,0.7)', textDecoration: 'none', padding: '5px 0', transition: '0.15s', display: 'flex', alignItems: 'center', gap: 6 }}
+                        style={{ fontSize: 10.5, color: 'rgba(255,255,255,0.45)', textDecoration: 'none', padding: '3px 0', transition: '0.15s', display: 'flex', alignItems: 'center', gap: 5, lineHeight: 1.3 }}
                         onMouseEnter={e => { e.currentTarget.style.color = '#b4fd83'; }}
-                        onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.7)'; }}
+                        onMouseLeave={e => { e.currentTarget.style.color = 'rgba(255,255,255,0.45)'; }}
                       >
-                        <span style={{ width: 3, height: 3, borderRadius: '50%', background: 'rgba(180,253,131,0.4)', flexShrink: 0, display: 'inline-block' }} />
+                        <span style={{ width: 3, height: 3, borderRadius: '50%', background: 'rgba(180,253,131,0.35)', flexShrink: 0, display: 'inline-block' }} />
                         {link.label}
                       </Link>
                     ))}
